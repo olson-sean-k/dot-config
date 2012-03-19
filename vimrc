@@ -23,5 +23,8 @@ set nobackup								"do not use backup files
 syntax on									"enable syntax highlighting
 
 if 256 <= &t_Co || has("gui_running")
-	colorscheme mustang
+	colorscheme sunburst
 endif
+
+autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
