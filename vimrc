@@ -38,6 +38,11 @@ set nobackup
 syntax on
 filetype on
 
+"map , to leader key
+let mapleader=","
+noremap \ ,
+noremap <C-1> :let @/ = ""<CR><C-1>
+
 "map ctrl+h/j/k/l to window movement
 map <C-h> <C-w>h<C-w>_
 map <C-j> <C-w>j<C-w>_
