@@ -36,9 +36,25 @@ set nobackup
 
 "enable syntax highlighting
 syntax on
+filetype on
+
+"map ctrl+h/j/k/l to window movement
+map <C-h> <C-w>h<C-w>_
+map <C-j> <C-w>j<C-w>_
+map <C-k> <C-w>k<C-w>_
+map <C-l> <C-w>l<C-w>_
 
 colorscheme solarized
 set background=dark
 
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
+
+"NERDTree
+map <Leader>t :NERDTreeToggle<CR>
+let NERDTreeShowBookmarks=1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"CtrlP
+let g:ctrlp_cmd = "CtrlPMRUFiles"
+let g:ctrlp_working_path_mode=1
