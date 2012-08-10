@@ -1,29 +1,44 @@
-set listchars=eol:$,nbsp:-,tab:>-,trail:-
+call pathogen#infect()
+
+set listchars=nbsp:·,tab:>·,trail:·
 set list
 
-set nowrap									"do not wrap lines
+"do not wrap lines
+set nowrap
 
-set autoindent								"automatially indent
-set smarttab								"insert tabs based on shiftwidth, not tabstop
-set shiftwidth=4							"automatically indent by four spaces
-set tabstop=4								"tabs display as four spaces
+"automatially indent
+set autoindent
+"insert tabs based on shiftwidth, not tabstop
+set smarttab
+"automatically indent by four spaces
+set shiftwidth=4
+"tabs display as four spaces
+set tabstop=4
 
-set pastetoggle=<F2>						"disable smart indenting for pasting text
+set wildmenu
+set wildmode=list:longest
 
-set backspace=indent,eol,start				"backspace over everything in insert mode
+"disable smart indenting for pasting text
+set pastetoggle=<F2>
 
-set number									"display line numbers
+"backspace over everything in insert mode
+set backspace=indent,eol,start
 
-"set visualbell								"do not beep
+"display line numbers
+set number
+
+"set visualbell
 set noerrorbells
 
-set nobackup								"do not use backup files
+"do not use backup files
+set nobackup
 "set noswapfile
 
-syntax on									"enable syntax highlighting
+"enable syntax highlighting
+syntax on
 
 colorscheme solarized
-set background=light
+set background=dark
 
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
