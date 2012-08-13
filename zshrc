@@ -1,3 +1,5 @@
+autoload -U colors && colors
+
 #tab completion
 autoload -U compinit
 compinit
@@ -44,8 +46,8 @@ setopt auto_cd
 
 #set prompt
 #PS1='[%T] %n@%m:%~# '
-PROMPT='%n@%B%m%b$ '
-RPROMPT='%~'
+PROMPT='%{%(!.%F{red}.%F{cyan})%}%n%{%f%}@%{%F{yellow}%}%m%{%f%}%# '
+RPROMPT='%{%F{magenta}%}%~%{%f%}'
 
 #report CPU usage for commands taking more than 10 seconds
 REPORTTIME=10
