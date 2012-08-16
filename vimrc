@@ -52,9 +52,6 @@ map <C-l> <C-w>l<C-w>_
 colorscheme solarized
 set background=dark
 
-autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
-
 "NERDTree
 map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
