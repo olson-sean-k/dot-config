@@ -26,6 +26,8 @@ fi
 alias ll='ls -l'
 alias la='ls -a'
 
+alias tree='tree -C'
+
 #history
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=5000
