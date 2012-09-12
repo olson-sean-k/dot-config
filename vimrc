@@ -34,6 +34,11 @@ set noerrorbells
 set nobackup
 "set noswapfile
 
+"stash backup and swap files in a central directory
+"this doesn't work well when editing files concurrently alongside other users
+"set backupdir=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
+"set directory=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
+
 "enable syntax highlighting
 syntax on
 filetype on
