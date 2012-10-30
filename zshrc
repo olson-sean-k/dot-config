@@ -27,6 +27,12 @@ alias ll='ls -l'
 alias la='ls -a'
 
 alias tree='tree -C'
+alias trel='tree -L 3'
+
+#alias htop if available
+if (( $+commands[htop] )); then
+#	alias top='htop'
+fi
 
 #history
 HISTFILE=~/.zhistory
