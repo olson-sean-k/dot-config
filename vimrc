@@ -14,6 +14,8 @@ set smarttab
 set shiftwidth=4
 "tabs display as four spaces
 set tabstop=4
+"use spaces for tabs
+set expandtab
 
 set wildmenu
 set wildmode=list:longest
@@ -65,3 +67,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "CtrlP
 let g:ctrlp_cmd = "CtrlPMRUFiles"
 let g:ctrlp_working_path_mode=1
+
+"Golang
+autocmd FileType go setlocal noexpandtab
