@@ -29,6 +29,8 @@ alias la='ls -a'
 alias tree='tree -C'
 alias trel='tree -L 3'
 
+alias lstm='tmux list-sessions'
+
 #alias htop if available
 if (( $+commands[htop] )); then
 #	alias top='htop'
@@ -59,3 +61,11 @@ RPROMPT='%{%F{magenta}%}%~%{%f%}'
 
 #report CPU usage for commands taking more than 10 seconds
 REPORTTIME=10
+
+if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi
+
+#peru
+export PERU_CACHE_NAME=peru-cache
+
+#go
+export GOPATH="$HOME/src/peru-go"
