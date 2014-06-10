@@ -68,4 +68,9 @@ if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi
 export PERU_CACHE_NAME=peru-cache
 
 #go
-export GOPATH="$HOME/src/peru-go"
+export GOPATH="$HOME/src"
+
+#splash
+if (( $+commands[splash] )); then
+#    splash
+fi

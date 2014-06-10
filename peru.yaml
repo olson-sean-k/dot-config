@@ -1,0 +1,48 @@
+imports:
+  vim-colors-solarized: vim/bundle/colors-solarized
+  vim-ctrlp: vim/bundle/ctrlp
+  vim-fugitive: vim/bundle/fugitive
+  vim-neocomplete: vim/bundle/neocomplete
+  vim-nerdtree: vim/bundle/nerdtree
+  vim-pathogen: vim/autoload
+  vim-repeat: vim/bundle/repeat
+  vim-syntastic: vim/bundle/syntastic
+  vim-surround: vim/bundle/surround
+  vim-yankstack: vim/bundle/yankstack
+
+git module vim-colors-solarized:
+  url: https://github.com/altercation/vim-colors-solarized.git
+  rev: 528a59f26d12278698bb946f8fb82a63711eec21
+
+git module vim-ctrlp:
+  url: https://github.com/kien/ctrlp.vim.git
+  rev: b5d3fe66a58a13d2ff8b6391f4387608496a030f
+
+git module vim-fugitive:
+  url: https://github.com/tpope/vim-fugitive.git
+  rev: f8bf95b9ff838ede04ab02487524849fb03a2576
+
+git module vim-neocomplete:
+  url: https://github.com/Shougo/neocomplete.vim.git
+  rev: 56fe81fd63a4282e2fe20732dcf5a4f3fe9b1c8a
+
+git module vim-nerdtree:
+  url: https://github.com/scrooloose/nerdtree.git
+  rev: b0bb781fc73ef40365e4c996a16f04368d64fc9d
+
+git module vim-pathogen:
+  url: https://github.com/tpope/vim-pathogen.git
+  export: autoload/
+  rev: 336611a3d08ccd4d4d2987fb3140c71bc0a2125c
+
+git module vim-syntastic:
+  url: https://github.com/scrooloose/syntastic.git
+  rev: 50518b335d6bc486c895d4cb34c29417238cbe81
+
+git module vim-surround:
+  url: https://github.com/tpope/vim-surround.git
+  rev: 42e9b46e7a20a2f394664874c7bbd9d6f6c39e8a
+
+git module vim-yankstack:
+  url: https://github.com/maxbrunsfeld/vim-yankstack.git
+  rev: c8e6be59297d50c9cba613a12f5691cd8b738bc4

@@ -23,6 +23,9 @@ set wildmode=list:longest
 "disable smart indenting for pasting text
 set pastetoggle=<F2>
 
+"highlight search
+set hlsearch
+
 "backspace over everything in insert mode
 set backspace=indent,eol,start
 
