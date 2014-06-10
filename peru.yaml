@@ -5,7 +5,6 @@ imports:
   vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree: vim/bundle/nerdtree
   vim-pathogen: vim/autoload
-  vim-repeat: vim/bundle/repeat
   vim-syntastic: vim/bundle/syntastic
   vim-surround: vim/bundle/surround
   vim-yankstack: vim/bundle/yankstack
@@ -20,11 +19,11 @@ git module vim-ctrlp:
 
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
-  rev: f8bf95b9ff838ede04ab02487524849fb03a2576
+  rev: 545578538cb1ba708a41a88c1d827e279ba5ee63
 
 git module vim-neocomplete:
   url: https://github.com/Shougo/neocomplete.vim.git
-  rev: 56fe81fd63a4282e2fe20732dcf5a4f3fe9b1c8a
+  rev: cf7a2829fb711f0cb1cf189d04fbe3a77784d42f
 
 git module vim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
@@ -33,15 +32,15 @@ git module vim-nerdtree:
 git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
-  rev: 336611a3d08ccd4d4d2987fb3140c71bc0a2125c
+  rev: ed01fca95c271ab83e14b041aded328a9f9574a7
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
-  rev: 50518b335d6bc486c895d4cb34c29417238cbe81
+  rev: 4004c021af2fed1e30d22aeb28f6703dca652547
 
 git module vim-surround:
   url: https://github.com/tpope/vim-surround.git
-  rev: 42e9b46e7a20a2f394664874c7bbd9d6f6c39e8a
+  rev: f85cb4e788356f664d033e8519abdd8e1bc26762
 
 git module vim-yankstack:
   url: https://github.com/maxbrunsfeld/vim-yankstack.git
