@@ -2,12 +2,12 @@ imports:
   vim-colors-solarized: vim/bundle/colors-solarized
   vim-ctrlp: vim/bundle/ctrlp
   vim-fugitive: vim/bundle/fugitive
-  vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree: vim/bundle/nerdtree
   vim-pathogen: vim/autoload
   vim-syntastic: vim/bundle/syntastic
   vim-surround: vim/bundle/surround
   vim-yankstack: vim/bundle/yankstack
+  vim-youcompleteme: vim/bundle/youcompleteme
 
 git module vim-colors-solarized:
   url: https://github.com/altercation/vim-colors-solarized.git
@@ -20,10 +20,6 @@ git module vim-ctrlp:
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
   rev: 545578538cb1ba708a41a88c1d827e279ba5ee63
-
-git module vim-neocomplete:
-  url: https://github.com/Shougo/neocomplete.vim.git
-  rev: cf7a2829fb711f0cb1cf189d04fbe3a77784d42f
 
 git module vim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
@@ -45,3 +41,7 @@ git module vim-surround:
 git module vim-yankstack:
   url: https://github.com/maxbrunsfeld/vim-yankstack.git
   rev: c8e6be59297d50c9cba613a12f5691cd8b738bc4
+
+git module vim-youcompleteme:
+  url: https://github.com/Valloric/YouCompleteMe.git
+  rev: 9cff4e854819f8d46b9752318e529eafd9cb3858
