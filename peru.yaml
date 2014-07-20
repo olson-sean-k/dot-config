@@ -1,4 +1,5 @@
 imports:
+  dircolors-solarized: .
   vim-colors-solarized: vim/bundle/colors-solarized
   vim-ctrlp: vim/bundle/ctrlp
   vim-fugitive: vim/bundle/fugitive
@@ -8,6 +9,14 @@ imports:
   vim-surround: vim/bundle/surround
   vim-yankstack: vim/bundle/yankstack
   vim-youcompleteme: vim/bundle/youcompleteme
+
+git module dircolors-solarized:
+  url: https://github.com/seebi/dircolors-solarized
+  rev: a5e130c642e45323a22226f331cb60fd37ce564f
+  # This pattern is a bit of a hack.
+  # TODO: When peru has better support to "cherry pick", use that instead.
+  build: mkdir out && cp dircolors.ansi-dark out/dir_colors
+  export: out
 
 git module vim-colors-solarized:
   url: https://github.com/altercation/vim-colors-solarized.git
