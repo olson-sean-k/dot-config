@@ -11,7 +11,7 @@ zstyle ':completion:*' completer _expand _complete _approximate
 
 # Color support for ls.
 if [[ -x "`whence -p dircolors`" ]]; then
-  eval `dircolors`
+  eval `dircolors ~/.dir_colors`
   alias ls='ls -F --color=auto'
 
   alias grep='grep --color=auto'
