@@ -1,6 +1,6 @@
 autoload -U colors && colors
 
-#tab completion
+# Tab completion.
 autoload -U compinit
 compinit
 
@@ -9,7 +9,7 @@ setopt completeinword
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' completer _expand _complete _approximate
 
-#color support for ls
+# Color support for ls.
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors`
   alias ls='ls -F --color=auto'
@@ -22,9 +22,14 @@ else
   alias ls='ls -F'
 fi
 
-#aliases
+# General aliases.
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 alias tree='tree -C'
 alias trel='tree -L 3'
@@ -33,12 +38,7 @@ alias tmls='tmux list-sessions'
 
 alias gmeld='git difftool --dir-diff --tool=meld'
 
-#alias htop if available
-if (( $+commands[htop] )); then
-#  alias top='htop'
-fi
-
-#history
+# History.
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=5000
 
@@ -46,35 +46,35 @@ setopt incappendhistory
 setopt sharehistory
 setopt extendedhistory
 
-#extended globbing
+# Extended globbing.
 setopt extendedglob
 unsetopt caseglob
 
-#allow comments at prompt
+# Allow comments at prompt.
 setopt interactivecomments
 
-#change directory without cd
+# Change directory without cd.
 setopt auto_cd
 
-#set prompt
+# Set prompt.
 setopt prompt_subst
 
 PROMPT='%{%(!.%F{red}.%F{cyan})%}%n%{%f%}@%{%F{yellow}%}%m%{%f%} %{%F{green}%}$(__git_prompt)%{%f%}%# '
 RPROMPT='%{%F{magenta}%}%~%{%f%}'
 
-#report CPU usage for commands taking more than 10 seconds
+# Report CPU usage for long running commands.
 REPORTTIME=10
 
-#add ~/bin to PATH
+# Add ~/bin to PATH.
 if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi
 
-#go
+# Golang.
 export GOPATH="$HOME/src"
 
-#splash
-if (( $+commands[splash] )); then
+# Display a splash if splash is in PATH.
+#if (( $+commands[splash] )); then
 #  splash
-fi
+#fi
 
 __git_prompt() {
   if git rev-parse --git-dir > /dev/null 2>&1; then
