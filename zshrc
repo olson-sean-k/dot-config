@@ -9,7 +9,7 @@ setopt completeinword
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' completer _expand _complete _approximate
 
-# Color support for ls.
+# Colors.
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors ~/.dir_colors`
   alias ls='ls -F --color=auto'
@@ -23,13 +23,8 @@ else
 fi
 
 # General aliases.
-alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 
 alias tree='tree -C'
 alias trel='tree -L 3'
