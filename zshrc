@@ -30,6 +30,7 @@ alias tree='tree -C'
 alias trel='tree -L 3'
 
 alias tmls='tmux list-sessions'
+alias tma='tmux attach -t '
 
 alias gmeld='git difftool --dir-diff --tool=meld'
 
