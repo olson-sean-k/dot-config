@@ -29,8 +29,9 @@ alias la='ls -a'
 alias tree='tree -C'
 alias trel='tree -L 3'
 
-alias tmls='tmux list-sessions'
 alias tma='tmux attach'
+alias tmls='tmux list-sessions'
+alias tmns='tmux new-session'
 
 alias gitmeld='git difftool --dir-diff --tool=meld'
 
