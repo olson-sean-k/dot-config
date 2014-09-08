@@ -1,5 +1,7 @@
 call pathogen#infect()
 
+let s:repo = fnamemodify(resolve(expand('<sfile>:p')), ':ht')
+
 set listchars=nbsp:·,tab:>·,trail:·
 set list
 

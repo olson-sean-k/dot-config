@@ -1,5 +1,23 @@
 autoload -U colors && colors
 
+realpath() {
+  (
+    target_file="$1"
+    cd "$(dirname "$target_file")"
+    target_file="$(basename "$target_file")"
+
+    while [ -L "$target_file" ]; do
+      target_file="$(readlink "$target_file")"
+      cd "$(dirname "$target_file")"
+      target_file="$(basename "$target_file")"
+    done
+
+    phys_dir="$(pwd -P)"
+    echo "$phys_dir/$target_file"
+  )
+}
+repo="$(dirname $(realpath ${ZDOTDIR-~}/.zshrc))"
+
 # Tab completion.
 autoload -U compinit
 compinit
@@ -63,7 +81,7 @@ RPROMPT='%{%F{magenta}%}%~%{%f%}'
 REPORTTIME=10
 
 # Add ~/bin to PATH.
-if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi
+if [[ -d "$HOME/bin" ]] ; then PATH="$HOME/bin${PATH+:$PATH}" fi
 
 # Golang.
 export GOPATH="$HOME/src"
