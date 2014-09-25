@@ -12,7 +12,7 @@ imports:
 
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized
-  rev: a5e130c642e45323a22226f331cb60fd37ce564f
+  rev: a6dfbac61855960b73091d4b1a9f0cd84aee6230
   # This pattern is a bit of a hack.
   # TODO: When peru has better support to "cherry pick", use that instead.
   build: mkdir out && cp dircolors.ansi-dark out/dir_colors
@@ -28,29 +28,29 @@ git module vim-ctrlp:
 
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
-  rev: 545578538cb1ba708a41a88c1d827e279ba5ee63
+  rev: 0374322ba5d85ae44dd9dc44ef31ca015a59097e
 
 git module vim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
-  rev: b0bb781fc73ef40365e4c996a16f04368d64fc9d
+  rev: 4f1e6ecb057fc0bac189171c1430d71ef25f6bb1
 
 git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
-  rev: ed01fca95c271ab83e14b041aded328a9f9574a7
+  rev: 91e6378908721d20514bbe5d18d292a0a15faf0c
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
-  rev: 4004c021af2fed1e30d22aeb28f6703dca652547
+  rev: 2a88120b33a76b29a3a80dc007cca30a34f985b7
 
 git module vim-surround:
   url: https://github.com/tpope/vim-surround.git
-  rev: f85cb4e788356f664d033e8519abdd8e1bc26762
+  rev: fa433e0b7330753688f715f3be5d10dc480f20e5
 
 git module vim-yankstack:
   url: https://github.com/maxbrunsfeld/vim-yankstack.git
-  rev: c8e6be59297d50c9cba613a12f5691cd8b738bc4
+  rev: c6b96be20d9cfcbbcd7cc257a73274c6702d3fb7
 
 git module vim-youcompleteme:
   url: https://github.com/Valloric/YouCompleteMe.git
-  rev: 9cff4e854819f8d46b9752318e529eafd9cb3858
+  rev: b9f717f23bfba1ff2b29c8ecd0c74c93cbf77d7a
