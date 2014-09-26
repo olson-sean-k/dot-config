@@ -66,14 +66,19 @@ map <C-l> <C-w>l<C-w>_
 colorscheme solarized
 set background=dark
 
+" CtrlP.
+let g:ctrlp_cmd = "CtrlPMRUFiles"
+let g:ctrlp_working_path_mode=1
+
+" neocomplete.
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_smart_case=1
+let g:neocomplete#sources#syntax#min_keyword_length=3
+
 " NERDTree.
 map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" CtrlP.
-let g:ctrlp_cmd = "CtrlPMRUFiles"
-let g:ctrlp_working_path_mode=1
 
 " Golang.
 autocmd FileType go setlocal noexpandtab
