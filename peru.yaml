@@ -6,6 +6,7 @@ imports:
   vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree: vim/bundle/nerdtree
   vim-pathogen: vim/autoload
+  vim-rust: vim/bundle/rust
   vim-syntastic: vim/bundle/syntastic
   vim-surround: vim/bundle/surround
   vim-yankstack: vim/bundle/yankstack
@@ -42,6 +43,10 @@ git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
   rev: 91e6378908721d20514bbe5d18d292a0a15faf0c
+
+git module vim-rust:
+  url: https://github.com/wting/rust.vim.git
+  rev: 63b486d22b6ffa9576402f6405dfcd3806bfb2ef
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
