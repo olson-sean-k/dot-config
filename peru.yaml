@@ -33,7 +33,7 @@ git module vim-fugitive:
 
 git module vim-neocomplete:
   url: https://github.com/Shougo/neocomplete.vim.git
-  rev: bdf5c4e3c7b0c01a3e09a814ebfd5d115360fa91
+  rev: 5efdea2cc0b206d448846bbc278756ba900c3d51
 
 git module vim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
@@ -46,11 +46,11 @@ git module vim-pathogen:
 
 git module vim-rust:
   url: https://github.com/wting/rust.vim.git
-  rev: 63b486d22b6ffa9576402f6405dfcd3806bfb2ef
+  rev: 077cc9faa8e703c6ab405ac894220f98ddafafa2
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
-  rev: 2a88120b33a76b29a3a80dc007cca30a34f985b7
+  rev: 7246fac6c028952cef486a71b995cc60c7c7426e
 
 git module vim-surround:
   url: https://github.com/tpope/vim-surround.git
