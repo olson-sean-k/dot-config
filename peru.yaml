@@ -13,7 +13,7 @@ imports:
 
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized
-  rev: a6dfbac61855960b73091d4b1a9f0cd84aee6230
+  rev: c1779cd7274eb4ad29d94193a4d859a93c5ee2cb
   build: >
     mkdir peru-out &&
     cp dircolors.ansi-dark peru-out/dir_colors
@@ -29,28 +29,28 @@ git module vim-ctrlp:
 
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
-  rev: 0374322ba5d85ae44dd9dc44ef31ca015a59097e
+  rev: d3b98d988602b94dc705ca99b171bb9f5b6c8a2c
 
 git module vim-neocomplete:
   url: https://github.com/Shougo/neocomplete.vim.git
-  rev: 5efdea2cc0b206d448846bbc278756ba900c3d51
+  rev: ad27186136ef9b0cbee33ff9e94b251e6bb6f6eb
 
 git module vim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
-  rev: 4f1e6ecb057fc0bac189171c1430d71ef25f6bb1
+  rev: f8fd2ecce20f5005e6313ce57d6d2a209890c946
 
 git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
-  rev: 91e6378908721d20514bbe5d18d292a0a15faf0c
+  rev: b9fb0dfd811004010f5f6903edef42d6004ebea2
 
 git module vim-rust:
   url: https://github.com/wting/rust.vim.git
-  rev: 077cc9faa8e703c6ab405ac894220f98ddafafa2
+  rev: 0023b6505c390e9de1be5e1c341bcc39155165a3
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
-  rev: 7246fac6c028952cef486a71b995cc60c7c7426e
+  rev: dbc7e39c13ec80252ae46e99061a11a727df87ad
 
 git module vim-surround:
   url: https://github.com/tpope/vim-surround.git
