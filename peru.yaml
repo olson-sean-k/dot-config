@@ -14,10 +14,9 @@ imports:
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized
   rev: c1779cd7274eb4ad29d94193a4d859a93c5ee2cb
-  build: >
-    mkdir peru-out &&
-    cp dircolors.ansi-dark peru-out/dir_colors
-  export: peru-out
+  copy:
+    dircolors.ansi-dark: dir_colors
+  pick: dir_colors
 
 git module vim-colors-solarized:
   url: https://github.com/altercation/vim-colors-solarized.git
