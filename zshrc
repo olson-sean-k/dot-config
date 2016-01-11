@@ -47,6 +47,8 @@ alias la='ls -a'
 alias tree='tree -C'
 alias trel='tree -L 3'
 
+alias dutop='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
+
 alias tma='tmux attach'
 alias tmls='tmux list-sessions'
 alias tmns='tmux new-session'

@@ -22,12 +22,14 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
 
+alias tree='tree -C'
+alias trel='tree -L 3'
+
+alias dutop='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-alias tree='tree -C'
-alias trel='tree -L 3'
 
 alias tmls='tmux list-sessions'
 
