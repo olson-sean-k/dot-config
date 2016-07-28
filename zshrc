@@ -41,7 +41,7 @@ else
 fi
 
 # General aliases.
-alias ll='ls -l'
+alias ll='ls -l -h'
 alias la='ls -a'
 
 alias tree='tree -C'
