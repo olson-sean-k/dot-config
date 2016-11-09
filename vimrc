@@ -80,5 +80,8 @@ map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Golang.
+" Go.
 autocmd FileType go setlocal noexpandtab
+
+" Rust.
+autocmd FileType rust setlocal colorcolumn=80,100
