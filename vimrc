@@ -43,6 +43,8 @@ set noerrorbells
 set nobackup
 "set noswapfile
 
+"set hidden
+
 " Stash backup and swap files in a central directory.
 " This doesn't work well when editing files concurrently alongside other users.
 "set backupdir=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
@@ -85,3 +87,6 @@ autocmd FileType go setlocal noexpandtab
 
 " Rust.
 autocmd FileType rust setlocal colorcolumn=80,100
+let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+let g:racer_cmd = "/usr/bin/racer"
+let g:racer_experimental_completer = 1

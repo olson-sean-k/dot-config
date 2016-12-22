@@ -6,6 +6,7 @@ imports:
   vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree: vim/bundle/nerdtree
   vim-pathogen: vim/autoload
+  vim-racer: vim/bundle/racer
   vim-rust: vim/bundle/rust
   vim-syntastic: vim/bundle/syntastic
   vim-surround: vim/bundle/surround
@@ -42,6 +43,10 @@ git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
   rev: 7ba2e1b67a8f8bcbafedaf6763580390dfd93436
+
+git module vim-racer:
+  url: https://github.com/racer-rust/vim-racer.git
+  rev: 6c87080bdb145595e37c304fd8b570b349eda381
 
 git module vim-rust:
   url: https://github.com/wting/rust.vim.git
