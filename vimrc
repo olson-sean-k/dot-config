@@ -80,7 +80,7 @@ let g:neocomplete#sources#syntax#min_keyword_length=3
 " NERDTree.
 map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Go.
 autocmd FileType go setlocal noexpandtab
