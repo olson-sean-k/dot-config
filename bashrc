@@ -18,6 +18,8 @@ shopt -s histappend
 
 
 # General aliases.
+alias nv='nvim'
+
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'

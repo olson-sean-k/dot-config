@@ -41,6 +41,8 @@ else
 fi
 
 # General aliases.
+alias nv='nvim'
+
 alias ll='ls -l -h'
 alias la='ls -a'
 

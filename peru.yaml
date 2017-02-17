@@ -1,16 +1,43 @@
 imports:
   dircolors-solarized: .
-  vim-colors-solarized: vim/bundle/colors-solarized
-  vim-ctrlp: vim/bundle/ctrlp
-  vim-fugitive: vim/bundle/fugitive
+  vim-colors-solarized:
+    - nvim/bundle/colors-solarized
+    - vim/bundle/colors-solarized
+  vim-ctrlp:
+    - nvim/bundle/ctrlp
+    - vim/bundle/ctrlp
+  vim-deoplete: nvim/bundle/deoplete
+  vim-fugitive:
+    - nvim/bundle/fugitive
+    - vim/bundle/fugitive
+  vim-glsl:
+    - nvim/bundle/glsl
+    - vim/bundle/glsl
   vim-neocomplete: vim/bundle/neocomplete
-  vim-nerdtree: vim/bundle/nerdtree
-  vim-pathogen: vim/autoload
-  vim-racer: vim/bundle/racer
-  vim-rust: vim/bundle/rust
-  vim-syntastic: vim/bundle/syntastic
-  vim-surround: vim/bundle/surround
-  vim-yankstack: vim/bundle/yankstack
+  vim-nerdtree:
+    - nvim/bundle/nerdtree
+    - vim/bundle/nerdtree
+  vim-pathogen:
+    - nvim/autoload
+    - vim/autoload
+  vim-racer:
+    - nvim/bundle/racer
+    - vim/bundle/racer
+  vim-rust:
+    - nvim/bundle/rust
+    - vim/bundle/rust
+  vim-syntastic:
+    - nvim/bundle/syntastic
+    - vim/bundle/syntastic
+  vim-surround:
+    - nvim/bundle/surround
+    - vim/bundle/surround
+  vim-toml:
+    - nvim/bundle/toml
+    - vim/bundle/toml
+  vim-yankstack:
+    - nvim/bundle/yankstack
+    - vim/bundle/yankstack
 
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized
@@ -27,9 +54,17 @@ git module vim-ctrlp:
   url: https://github.com/kien/ctrlp.vim.git
   rev: 564176f01d7f3f7f8ab452ff4e1f5314de7b0981
 
+git module vim-deoplete:
+  url: https://github.com/Shougo/deoplete.nvim.git
+  rev: eb65320f86cedf8fe78f05c13981f6b2388e0b07
+
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
   rev: b754bc2031f21a532c083dd0d072ba373bbe3a37
+
+git module vim-glsl:
+  url: https://github.com/tikhomirov/vim-glsl.git
+  rev: f2151a570c91ec4fdadfb7eca0ba31b9959235a5
 
 git module vim-neocomplete:
   url: https://github.com/Shougo/neocomplete.vim.git
@@ -59,6 +94,10 @@ git module vim-syntastic:
 git module vim-surround:
   url: https://github.com/tpope/vim-surround.git
   rev: e49d6c2459e0f5569ff2d533b4df995dd7f98313
+
+git module vim-toml:
+  url: https://github.com/cespare/vim-toml.git
+  rev: 00ecc580aef1f7f80779af577b6e2b7a056f260f
 
 git module vim-yankstack:
   url: https://github.com/maxbrunsfeld/vim-yankstack.git
