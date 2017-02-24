@@ -10,6 +10,9 @@ imports:
   vim-fugitive:
     - nvim/bundle/fugitive
     - vim/bundle/fugitive
+  vim-gitgutter:
+    - nvim/bundle/gitgutter
+    - vim/bundle/gitgutter
   vim-glsl:
     - nvim/bundle/glsl
     - vim/bundle/glsl
@@ -61,6 +64,10 @@ git module vim-deoplete:
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
   rev: f44845e4408aae03e018e98afb7fbf0c2ee87dd5
+
+git module vim-gitgutter:
+  url: https://github.com/airblade/vim-gitgutter.git
+  rev: 1c034be0d31168c8f4770ef7b69adb67d00d6f3d
 
 git module vim-glsl:
   url: https://github.com/tikhomirov/vim-glsl.git
