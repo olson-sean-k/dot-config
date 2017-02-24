@@ -45,6 +45,8 @@ set nobackup
 
 "set hidden
 
+set statusline=%{fugitive#statusline()}
+
 " Stash backup and swap files in a central directory.
 " This doesn't work well when editing files concurrently alongside other users.
 "set backupdir=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
