@@ -45,8 +45,6 @@ set nobackup
 
 "set hidden
 
-set statusline=%{fugitive#statusline()}
-
 " Stash backup and swap files in a central directory.
 " This doesn't work well when editing files concurrently alongside other users.
 "set backupdir=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
@@ -89,6 +87,18 @@ endif
 map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" lightline
+let g:lightline={
+    \ 'colorscheme': 'solarized',
+    \ 'active': {
+    \     'left': [ [ 'mode', 'paste' ],
+    \               [ 'gitbranch', 'readonly', 'filename', 'modified' ]]
+    \ },
+    \ 'component_function': {
+    \     'gitbranch': 'fugitive#head'
+    \ },
+    \ }
 
 " Go.
 autocmd FileType go setlocal noexpandtab
