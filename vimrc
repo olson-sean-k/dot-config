@@ -45,8 +45,11 @@ set nobackup
 
 "set hidden
 
+" Display status and hide mode (interop with lightline).
+set noshowmode
+set laststatus=2
+
 " Stash backup and swap files in a central directory.
-" This doesn't work well when editing files concurrently alongside other users.
 "set backupdir=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
 "set directory=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
 
