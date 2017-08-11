@@ -43,7 +43,7 @@ set noerrorbells
 set nobackup
 "set noswapfile
 
-"set hidden
+set hidden
 
 " Display status and hide mode (interop with lightline).
 set noshowmode
@@ -75,12 +75,13 @@ set background=dark
 let g:ctrlp_cmd = "CtrlPMRUFiles"
 let g:ctrlp_working_path_mode=1
 
-" neocomplete / deoplete.
 if has('nvim')
+    " deoplete.
     let g:deoplete#enable_at_startup=1
     let g:deoplete#enable_smart_case=1
     let g:deoplete#sources#syntax#min_keyword_length=3
 else
+    " neocomplete.
     let g:neocomplete#enable_at_startup=1
     let g:neocomplete#enable_smart_case=1
     let g:neocomplete#sources#syntax#min_keyword_length=3
@@ -91,7 +92,7 @@ map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" lightline
+" lightline.
 let g:lightline={
     \ 'colorscheme': 'solarized',
     \ 'active': {
@@ -111,3 +112,6 @@ autocmd FileType rust setlocal colorcolumn=80,100
 let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 let g:racer_cmd = "/usr/bin/racer"
 let g:racer_experimental_completer = 1
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap <Leader>gd <Plug>(rust-doc)
