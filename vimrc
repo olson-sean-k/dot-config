@@ -1,6 +1,6 @@
 call pathogen#infect()
 
-let s:repo = fnamemodify(resolve(expand('<sfile>:p')), ':ht')
+let s:repo=fnamemodify(resolve(expand('<sfile>:p')), ':ht')
 
 set listchars=nbsp:·,tab:>·,trail:·
 set list
@@ -49,10 +49,6 @@ set hidden
 set noshowmode
 set laststatus=2
 
-" Stash backup and swap files in a central directory.
-"set backupdir=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
-"set directory=~/.vim/tmp,~/.tmp,/var/tmp,/tmp
-
 " Enable syntax highlighting.
 syntax on
 filetype on
@@ -72,7 +68,7 @@ colorscheme solarized
 set background=dark
 
 " CtrlP.
-let g:ctrlp_cmd = "CtrlPMRUFiles"
+let g:ctrlp_cmd="CtrlPMRUFiles"
 let g:ctrlp_working_path_mode=1
 
 if has('nvim')
@@ -110,8 +106,8 @@ autocmd FileType go setlocal noexpandtab
 " Rust.
 autocmd FileType rust setlocal colorcolumn=80,100
 let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-let g:racer_cmd = "/usr/bin/racer"
-let g:racer_experimental_completer = 1
+let g:racer_cmd="/usr/bin/racer"
+let g:racer_experimental_completer=1
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap <Leader>gd <Plug>(rust-doc)
