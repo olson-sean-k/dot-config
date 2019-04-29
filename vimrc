@@ -7,6 +7,8 @@ set list
 
 " Do not wrap lines.
 set nowrap
+" Wrap at column 80.
+set textwidth=80
 
 " Automatially indent.
 set autoindent
