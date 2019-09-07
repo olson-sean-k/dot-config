@@ -1,0 +1,10 @@
+add_newline = false
+prompt_order = [
+    "username",
+    "directory",
+    "git_branch",
+    "git_status",
+    "package",
+    "jobs",
+    "character"
+]

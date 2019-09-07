@@ -76,10 +76,14 @@ setopt interactivecomments
 setopt auto_cd
 
 # Set prompt.
-setopt prompt_subst
+if ! type "$starship" > /dev/null; then
+  eval "$(starship init zsh)"
+else
+  setopt prompt_subst
 
-PROMPT='%{%(!.%F{red}.%F{cyan})%}%n%{%f%}@%{%F{yellow}%}%m%{%f%} %{%F{green}%}$(__git_prompt)%{%f%}%# '
-RPROMPT='%{%F{magenta}%}%~%{%f%}'
+  PROMPT='%{%(!.%F{red}.%F{cyan})%}%n%{%f%}@%{%F{yellow}%}%m%{%f%} %{%F{green}%}$(__git_prompt)%{%f%}%# '
+  RPROMPT='%{%F{magenta}%}%~%{%f%}'
+fi
 
 # Report CPU usage for long running commands.
 REPORTTIME=10
