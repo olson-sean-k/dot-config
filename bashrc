@@ -48,6 +48,7 @@ export PS1="\[\e[0;36m\]\u@\h\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;33m\]\$(safe
 
 # Add ~/bin to PATH.
 if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi
+
 # Set text editor.
 export EDITOR=vim
 
