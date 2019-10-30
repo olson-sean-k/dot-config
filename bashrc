@@ -44,7 +44,13 @@ function safe_git_ps1() {
   fi
 }
 # Set prompt.
-export PS1="\[\e[0;36m\]\u@\h\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;33m\]\$(safe_git_ps1)\[\e[m\]\$ "
+if hash starship 2>/dev/null; then
+  # If available, use Starship to configure the prompt.
+  eval "$(starship init bash)"
+else
+  # If Starship is not available, fall back to a custom prompt.
+  export PS1="\[\e[0;36m\]\u@\h\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;33m\]\$(safe_git_ps1)\[\e[m\]\$ "
+fi
 
 # Add ~/bin to PATH.
 if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi

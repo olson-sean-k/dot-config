@@ -76,9 +76,11 @@ setopt interactivecomments
 setopt auto_cd
 
 # Set prompt.
-if ! type "$starship" > /dev/null; then
+if (( $+commands[starship] )); then
+  # If available, use Starship to configure the prompt.
   eval "$(starship init zsh)"
 else
+  # If Starship is not available, fall back to a custom prompt.
   setopt prompt_subst
 
   PROMPT='%{%(!.%F{red}.%F{cyan})%}%n%{%f%}@%{%F{yellow}%}%m%{%f%} %{%F{green}%}$(__git_prompt)%{%f%}%# '
@@ -93,11 +95,6 @@ if [[ -d "$HOME/bin" ]] ; then PATH="$HOME/bin${PATH+:$PATH}" fi
 
 # Golang.
 export GOPATH="$HOME/src"
-
-# Display a splash if splash is in PATH.
-#if (( $+commands[splash] )); then
-#  splash
-#fi
 
 __git_prompt() {
   if git rev-parse --git-dir > /dev/null 2>&1; then
