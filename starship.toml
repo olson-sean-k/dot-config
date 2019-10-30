@@ -5,6 +5,7 @@ prompt_order = [
     "git_branch",
     "git_status",
     "package",
+    "line_break",
     "jobs",
     "character"
 ]
