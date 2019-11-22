@@ -52,8 +52,9 @@ else
   export PS1="\[\e[0;36m\]\u@\h\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;33m\]\$(safe_git_ps1)\[\e[m\]\$ "
 fi
 
-# Add ~/bin to PATH.
+# Add ~/bin and ~/.local/bin to PATH.
 if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi
+if [ -d "$HOME/.local/bin" ] ; then PATH="$HOME/.local/bin:$PATH" fi
 
 # Set text editor.
 export EDITOR=vim
