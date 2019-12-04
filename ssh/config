@@ -1,5 +1,5 @@
 Host github.com
-	User git
-	Hostname github.com
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/github
+    User git
+    Hostname github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/github

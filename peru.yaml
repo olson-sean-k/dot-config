@@ -19,6 +19,8 @@ imports:
   vim-lightline:
     - nvim/bundle/lightline
     - vim/bundle/lightline
+  vim-lsp:
+    - src/vim-lsp
   vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree:
     - nvim/bundle/nerdtree
@@ -76,6 +78,10 @@ git module vim-glsl:
 git module vim-lightline:
   url: https://github.com/itchyny/lightline.vim
   rev: 83ae633be323a7fb5baf77e493232cf3358d02bf
+
+git module vim-lsp:
+  url: https://github.com/autozimu/LanguageClient-neovim.git
+  rev: v0.1.153
 
 git module vim-neocomplete:
   url: https://github.com/Shougo/neocomplete.vim.git

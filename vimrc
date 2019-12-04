@@ -91,7 +91,6 @@ let NERDTreeShowBookmarks=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " LanguageClient
-set runtimepath+=~/.config/nvim/lsp
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ }
