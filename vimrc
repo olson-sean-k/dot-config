@@ -25,7 +25,7 @@ set wildmenu
 set wildmode=list:longest
 
 " Disable smart indenting for pasting text.
-set pastetoggle=<F2>
+set pastetoggle=<F3>
 
 " Highlight search.
 set hlsearch
@@ -90,6 +90,15 @@ map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" LanguageClient
+set runtimepath+=~/.config/nvim/lsp
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ }
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
 " lightline.
 let g:lightline={
     \ 'colorscheme': 'solarized',
@@ -107,9 +116,3 @@ autocmd FileType go setlocal noexpandtab
 
 " Rust.
 autocmd FileType rust setlocal colorcolumn=80,100
-let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-let g:racer_cmd="/usr/bin/racer"
-let g:racer_experimental_completer=1
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap <Leader>gd <Plug>(rust-doc)
