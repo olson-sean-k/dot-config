@@ -28,6 +28,9 @@ imports:
   vim-pathogen:
     - nvim/autoload
     - vim/autoload
+  vim-racer:
+    - nvim/autload
+    - vim/autload
   vim-rust:
     - nvim/bundle/rust
     - vim/bundle/rust
@@ -95,6 +98,10 @@ git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
   rev: e9fb0914dba5bdfe2feaa364dda2e9495c5620a2
+
+git module vim-racer:
+  url: https://github.com/racer-rust/racer.git
+  rev: 5db1d0cf8bd1a1030983337c2079be09a1268c8c
 
 git module vim-rust:
   url: https://github.com/rust-lang/rust.vim.git
