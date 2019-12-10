@@ -97,8 +97,8 @@ git module vim-pathogen:
   rev: e9fb0914dba5bdfe2feaa364dda2e9495c5620a2
 
 git module vim-rust:
-  url: https://github.com/wting/rust.vim.git
-  rev: 58ee0eedc5f374e6bc5f6a3e215421ec4fe3635e
+  url: https://github.com/rust-lang/rust.vim.git
+  rev: b7176e7a1607bb17f2f57cb8b365042f5676b21b
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
