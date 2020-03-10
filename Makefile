@@ -25,6 +25,7 @@ install: build
 	ln -s vimrc ~/.vimrc
 	ln -s zshrc ~/.zshrc
 	mkdir -p ~/.config
+	ln -s fish ~/.config/fish
 	ln -s starship.toml ~/.config/starship.toml
 	mkdir -p ~/.config/nvim
 	ln -s nvim/autoload ~/.config/nvim/autoload
