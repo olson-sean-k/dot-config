@@ -19,8 +19,10 @@ build:
 		nvim/bundle/lsp
 
 install: build
+	# Create symbolic links to configuration.
 	ln -s bashrc ~/.bashrc
 	ln -s dir_colors ~/.dir_colors
+	ln -s gitignore-global ~/.gitignore-global
 	ln -s tmux.conf ~/.tmux.conf
 	ln -s vimrc ~/.vimrc
 	ln -s zshrc ~/.zshrc
@@ -31,6 +33,8 @@ install: build
 	ln -s nvim/autoload ~/.config/nvim/autoload
 	ln -s nvim/bundle ~/.config/nvim/bundle
 	ln -s vimrc ~/.config/nvim/init.vim
+	# Configure tools.
+	git config --global core.excludesfile ~/.gitignore-global
 
 clean:
 	peru clean
