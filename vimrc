@@ -76,13 +76,15 @@ let g:ctrlp_working_path_mode=1
 if has('nvim')
     " deoplete.
     let g:deoplete#enable_at_startup=1
-    let g:deoplete#enable_smart_case=1
     let g:deoplete#sources#syntax#min_keyword_length=3
+    call deoplete#custom#option({
+        \ 'smart_case': v:true,
+        \ })
 else
     " neocomplete.
     let g:neocomplete#enable_at_startup=1
-    let g:neocomplete#enable_smart_case=1
     let g:neocomplete#sources#syntax#min_keyword_length=3
+    let g:neocomplete#enable_smart_case=1
 endif
 
 " NERDTree.
