@@ -16,7 +16,6 @@ HISTFILESIZE=20000
 # Append to the history file.
 shopt -s histappend
 
-
 # General aliases.
 alias nv='nvim'
 
@@ -37,6 +36,9 @@ alias tmls='tmux list-sessions'
 
 alias gmeld='git difftool --dir-diff --tool=meld'
 
+# Editor.
+export EDITOR=nvim
+
 # Use a git-aware prompt if available.
 function safe_git_ps1() {
   if [[ `type -t __git_ps1` = function ]]; then
@@ -51,13 +53,6 @@ else
   # If Starship is not available, fall back to a custom prompt.
   export PS1="\[\e[0;36m\]\u@\h\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;33m\]\$(safe_git_ps1)\[\e[m\]\$ "
 fi
-
-# Add ~/bin and ~/.local/bin to PATH.
-if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi
-if [ -d "$HOME/.local/bin" ] ; then PATH="$HOME/.local/bin:$PATH" fi
-
-# Set text editor.
-export EDITOR=vim
 
 # Fix ssh-agent issue in tmux.
 function fixauth() {
@@ -77,8 +72,7 @@ preexec_invoke_exec () {
 }
 trap 'preexec_invoke_exec' DEBUG
 
-# Load settings specific to this machine.
-local_bashrc=~/.bashrc.local
-if [ -e "$local_bashrc" ]; then
-  source "$local_bashrc"
+# Source local settings.
+if [ -e ~/.bashrc.local ]; then
+  source ~/.bashrc.local
 fi

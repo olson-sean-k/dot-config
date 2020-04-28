@@ -57,6 +57,9 @@ alias tmns='tmux new-session'
 
 alias gitmeld='git difftool --dir-diff --tool=meld'
 
+# Editor.
+export EDITOR=nvim
+
 # History.
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=5000
@@ -78,17 +81,6 @@ setopt auto_cd
 # Report CPU usage for long running commands.
 REPORTTIME=10
 
-# TODO: Migrate to ~/.local/bin and always include it in PATH (no condition).
-# Add ~/bin and ~/.local/bin to PATH.
-if [[ -d "$HOME/bin" ]] ; then PATH="$HOME/bin${PATH+:$PATH}" fi
-if [[ -d "$HOME/.local/bin" ]] ; then PATH="$HOME/.local/bin${PATH+:$PATH}" fi
-
-# Rust
-PATH="$HOME/.cargo/bin${PATH+:$PATH}"
-
-# Golang.
-export GOPATH="$HOME/src"
-
 # Set prompt.
 if (( $+commands[starship] )); then
   # If available, use Starship to configure the prompt.
@@ -99,6 +91,11 @@ else
 
   PROMPT='%{%(!.%F{red}.%F{cyan})%}%n%{%f%}@%{%F{yellow}%}%m%{%f%} %{%F{green}%}$(__git_prompt)%{%f%}%# '
   RPROMPT='%{%F{magenta}%}%~%{%f%}'
+fi
+
+# Source local settings.
+if [[ -f ~/.zshrc.local ]]; then
+  source ~/.zshrc.local
 fi
 
 __git_prompt() {

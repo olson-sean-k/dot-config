@@ -1,11 +1,8 @@
 SHELL:=/usr/bin/env bash
 #.SHELLFLAGS:=-e
 
-SRC:=./src
-
 build:
-	# Fetch and import modules. This includes source code in the `src`
-	# directory.
+	# Fetch and import modules.
 	peru sync
 
 install: build
@@ -26,6 +23,10 @@ install: build
 	# Configure tools.
 	git config --global core.excludesfile ~/.gitignore-global
 
+profile: build
+	# Create symbolic links to configuration.
+	ln -s -f $(realpath profile) ~/.profile
+	ln -s -f $(realpath zprofile) ~/.zprofile
+
 clean:
 	peru clean
-	rm -rf src
