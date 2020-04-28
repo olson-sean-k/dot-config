@@ -19,8 +19,6 @@ imports:
   vim-lightline:
     - nvim/bundle/lightline
     - vim/bundle/lightline
-  vim-lsp:
-    - src/vim-lsp
   vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree:
     - nvim/bundle/nerdtree
@@ -49,7 +47,7 @@ imports:
 
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized
-  rev: 2720cb1ff508bc358f9414f63370f0c6cd767b98
+  rev: 5fb86a3f947f0e8b3005871c2f97df80e80f3016
   copy:
     dircolors.ansi-dark: dir_colors
   pick: dir_colors
@@ -64,60 +62,56 @@ git module vim-ctrlp:
 
 git module vim-deoplete:
   url: https://github.com/Shougo/deoplete.nvim.git
-  rev: 9d4e88f6cce63ed1b52ca2401d809c55ab443b25
+  rev: eb2307cfa84280041bc294e2091cee40a9183db8
 
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
-  rev: 16b7a060a3e20b8e159783f42ce4aa79a158208c
+  rev: 0e35c9bbc78159318e7b7ffd228f09a96afb8fde
 
 git module vim-gitgutter:
   url: https://github.com/airblade/vim-gitgutter.git
-  rev: 7eeea63e62b1cc088a75c7a7c244fc774d82e5bb
+  rev: b7db78b258aa9925f3c86968b348413732964b3b
 
 git module vim-glsl:
   url: https://github.com/tikhomirov/vim-glsl.git
-  rev: 697eca9784ffac39308e1fd45e0300582c3d060b
+  rev: fbdb226318e3e1747b29f31ad07c0cce07e9f22a
 
 git module vim-lightline:
   url: https://github.com/itchyny/lightline.vim
-  rev: 83ae633be323a7fb5baf77e493232cf3358d02bf
-
-git module vim-lsp:
-  url: https://github.com/autozimu/LanguageClient-neovim.git
-  rev: v0.1.153
+  rev: b8976d2e549b417e5d1c1594fb9034b749976cc0
 
 git module vim-neocomplete:
   url: https://github.com/Shougo/neocomplete.vim.git
-  rev: 5f3e213c629b7fe1aa3723bf56fe3ead5555a526
+  rev: 0f83788cb67e0743a3a9c8d3a3a6e52a01bdc6c2
 
 git module vim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
-  rev: 3c0633578281463638235597d8208612544606ae
+  rev: f767dd34a0bda0a6db8efa43257c90981947f0ab
 
 git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
-  rev: e9fb0914dba5bdfe2feaa364dda2e9495c5620a2
+  rev: c6bc42404597c718e4a032a98e21e63321cbb05a
 
 git module vim-racer:
   url: https://github.com/racer-rust/racer.git
-  rev: 5db1d0cf8bd1a1030983337c2079be09a1268c8c
+  rev: 99160f281070e7f013bde7b01639b0cfbc0dc843
 
 git module vim-rust:
   url: https://github.com/rust-lang/rust.vim.git
-  rev: b7176e7a1607bb17f2f57cb8b365042f5676b21b
+  rev: ce5f2b1c881de1b2101924dc5a19046399d74db2
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
-  rev: 9f43dcb5a244faba6aedb6879b75a56c7de4b8ff
+  rev: f3766538720116f099a8b1517f76ae2f094afd20
 
 git module vim-surround:
   url: https://github.com/tpope/vim-surround.git
-  rev: ca58a2d886cc18734c90c9665da4775d444b0c04
+  rev: f51a26d3710629d031806305b6c8727189cd1935
 
 git module vim-toml:
   url: https://github.com/cespare/vim-toml.git
-  rev: 2295e612d936671048035dbc447f5400cbee60de
+  rev: a4ec206052aa347d7df90dc4b6697b7f2b7929bc
 
 git module vim-yankstack:
   url: https://github.com/maxbrunsfeld/vim-yankstack.git

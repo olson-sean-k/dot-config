@@ -7,16 +7,6 @@ build:
 	# Fetch and import modules. This includes source code in the `src`
 	# directory.
 	peru sync
-	# Build the language client for vim.
-	cd $(SRC)/vim-lsp && $(MAKE) release
-	# Copy the build output into a bundle.
-	mkdir -p nvim/bundle/lsp/bin
-	cp -a \
-		$(SRC)/vim-lsp/autoload \
-		$(SRC)/vim-lsp/bin \
-		$(SRC)/vim-lsp/doc \
-		$(SRC)/vim-lsp/plugin \
-		nvim/bundle/lsp
 
 install: build
 	# Create symbolic links to configuration.
