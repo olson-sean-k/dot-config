@@ -27,8 +27,8 @@ imports:
     - nvim/autoload
     - vim/autoload
   vim-racer:
-    - nvim/autload
-    - vim/autload
+    - nvim/autoload
+    - vim/autoload
   vim-rust:
     - nvim/bundle/rust
     - vim/bundle/rust
