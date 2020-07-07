@@ -18,6 +18,8 @@ realpath() {
 }
 repo="$(dirname $(realpath ${ZDOTDIR-~}/.zshrc))"
 
+bindkey -e
+
 # Tab completion.
 autoload -U compinit
 compinit
