@@ -11,6 +11,7 @@ install: build
 	ln -s -f $(realpath dir_colors) ~/.dir_colors
 	ln -s -f $(realpath gitignore-global) ~/.gitignore-global
 	ln -s -f $(realpath tmux.conf) ~/.tmux.conf
+	ln -s -f $(realpath vim) ~/.vim
 	ln -s -f $(realpath vimrc) ~/.vimrc
 	ln -s -f $(realpath zshrc) ~/.zshrc
 	mkdir -p ~/.config
