@@ -10,3 +10,7 @@ format = """\
     $jobs\
     $character\
     """
+
+[username]
+format = "[$user]($style) on "
+show_always = true
