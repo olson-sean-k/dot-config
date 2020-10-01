@@ -11,6 +11,13 @@ format = """\
     $character\
     """
 
+[directory]
+format = "in [$path]($style) "
+
+[hostname]
+format = "on [$hostname]($style) "
+ssh_only = false
+
 [username]
-format = "[$user]($style) on "
+format = "[$user]($style) "
 show_always = true
