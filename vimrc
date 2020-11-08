@@ -73,34 +73,42 @@ set background=dark
 let g:ctrlp_cmd="CtrlPMRUFiles"
 let g:ctrlp_working_path_mode=1
 
-if has('nvim')
-    " deoplete.
-    let g:deoplete#enable_at_startup=1
-    let g:deoplete#sources#syntax#min_keyword_length=3
-    call deoplete#custom#option({
-        \ 'smart_case': v:true,
-        \ })
-else
-    " neocomplete.
-    let g:neocomplete#enable_at_startup=1
-    let g:neocomplete#sources#syntax#min_keyword_length=3
-    let g:neocomplete#enable_smart_case=1
-endif
+" TODO: Configure the interaction between these plugins and LSP.
+" if has('nvim')
+"     " deoplete.
+"     let g:deoplete#enable_at_startup=1
+"     let g:deoplete#sources#syntax#min_keyword_length=3
+"     call deoplete#custom#option({
+"         \ 'smart_case': v:true,
+"         \ })
+" else
+"     " neocomplete.
+"     let g:neocomplete#enable_at_startup=1
+"     let g:neocomplete#sources#syntax#min_keyword_length=3
+"     let g:neocomplete#enable_smart_case=1
+" endif
 
 " NERDTree.
 map <Leader>t :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" LanguageClient
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rust-analyzer'],
-    \ }
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> gi :call LanguageClient#textDocument_implementation()<CR>
-nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+" coc
+nmap <silent> gd <PLUG>(coc-definition)
+nmap <silent> gi <PLUG>(coc-implementation)
+nmap <silent> gr <PLUG>(coc-references)
+nmap <silent> <F2> <PLUG>(coc-rename)
+
+nnoremap <silent> K :call <SID>coc_hover()<CR>
+function! s:coc_hover()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execut '!' . &keywordprg . " " . expand('<cword>')
+    endif
+endfunction
 
 " lightline.
 let g:lightline={

@@ -19,6 +19,7 @@ install: build
 	mkdir -p ~/.config/nvim
 	ln -s -f $(realpath nvim/autoload) ~/.config/nvim/autoload
 	ln -s -f $(realpath nvim/bundle) ~/.config/nvim/bundle
+	ln -s -f $(realpath coc-settings.json) ~/.config/nvim/coc-settings.json
 	ln -s -f $(realpath vimrc) ~/.config/nvim/init.vim
 	# Configure tools.
 	git config --global core.excludesfile ~/.gitignore-global

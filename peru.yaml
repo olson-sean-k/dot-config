@@ -6,7 +6,7 @@ imports:
   vim-ctrlp:
     - nvim/bundle/ctrlp
     - vim/bundle/ctrlp
-  vim-deoplete: nvim/bundle/deoplete
+  #vim-deoplete: nvim/bundle/deoplete
   vim-fugitive:
     - nvim/bundle/fugitive
     - vim/bundle/fugitive
@@ -19,7 +19,7 @@ imports:
   vim-lightline:
     - nvim/bundle/lightline
     - vim/bundle/lightline
-  vim-neocomplete: vim/bundle/neocomplete
+  #vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree:
     - nvim/bundle/nerdtree
     - vim/bundle/nerdtree
