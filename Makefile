@@ -15,7 +15,6 @@ install: build
 	ln -s -f $(realpath vimrc) ~/.vimrc
 	ln -s -f $(realpath zshrc) ~/.zshrc
 	mkdir -p ~/.config
-	ln -s -f $(realpath fish) ~/.config/fish
 	ln -s -f $(realpath starship.toml) ~/.config/starship.toml
 	mkdir -p ~/.config/nvim
 	ln -s -f $(realpath nvim/autoload) ~/.config/nvim/autoload
