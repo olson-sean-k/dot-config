@@ -1,15 +1,16 @@
 add_newline = false
 format = """\
-    $username\
-    $hostname\
-    $directory\
-    $git_branch\
-    $git_status\
-    $package\
-    $line_break\
-    $jobs\
-    $character\
-    """
+[╭───────────────────╯](bold green)
+[│](bold green) \
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$package\
+$line_break\
+$jobs\
+[╰─$character](bold green)"""
 
 [directory]
 format = "in [$path]($style) "
