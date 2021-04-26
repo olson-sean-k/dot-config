@@ -79,7 +79,7 @@ function s:match_cursor_hold_search(cword)
     let fsearch = s:invert_empty_pattern(@/)
     let bsearch = s:invert_empty_pattern(@?)
     if !(a:cword =~ '^\_s*$' || a:cword =~ fsearch || a:cword =~ bsearch)
-        highlight CursorHoldSearch cterm=reverse ctermfg=4 guifg=Black guibg=Blue
+        highlight CursorHoldSearch cterm=reverse ctermfg=2 guifg=Black guibg=Green
         :exec 'match CursorHoldSearch #\V\<' . a:cword . '\>#'
     endif
 endfunction
@@ -88,7 +88,7 @@ augroup cursor_hold_search
     au CursorHold * call s:match_cursor_hold_search(expand('<cword>'))
 augroup END
 
-colorscheme solarized
+colorscheme nord
 set background=dark
 
 " CtrlP.
@@ -139,7 +139,7 @@ endfunction
 
 " lightline.
 let g:lightline={
-    \ 'colorscheme': 'solarized',
+    \ 'colorscheme': 'nord',
     \ 'active': {
     \     'left': [ [ 'mode', 'paste' ],
     \               [ 'gitbranch', 'readonly', 'relativepath', 'modified' ]]

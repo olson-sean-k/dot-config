@@ -1,15 +1,12 @@
 imports:
-  dircolors-solarized: .
+  dircolors-nord: .
   vim-coc:
     - nvim/bundle/coc
     - vim/bundle/coc
-  vim-colors-solarized:
-    - nvim/bundle/colors-solarized
-    - vim/bundle/colors-solarized
   vim-ctrlp:
     - nvim/bundle/ctrlp
     - vim/bundle/ctrlp
-  #vim-deoplete: nvim/bundle/deoplete
+  vim-deoplete: nvim/bundle/deoplete
   vim-fugitive:
     - nvim/bundle/fugitive
     - vim/bundle/fugitive
@@ -22,10 +19,13 @@ imports:
   vim-lightline:
     - nvim/bundle/lightline
     - vim/bundle/lightline
-  #vim-neocomplete: vim/bundle/neocomplete
+  vim-neocomplete: vim/bundle/neocomplete
   vim-nerdtree:
     - nvim/bundle/nerdtree
     - vim/bundle/nerdtree
+  vim-nord:
+    - nvim/bundle/nord
+    - vim/bundle/nord
   vim-pathogen:
     - nvim/autoload
     - vim/autoload
@@ -48,21 +48,15 @@ imports:
     - nvim/bundle/yankstack
     - vim/bundle/yankstack
 
-git module dircolors-solarized:
-  url: https://github.com/seebi/dircolors-solarized.git
-  rev: f359095079dd875dd81fb0343247c6db32d596b9
-  copy:
-    dircolors.ansi-dark: dir_colors
-  pick: dir_colors
+git module dircolors-nord:
+  url: https://github.com/arcticicestudio/nord-dircolors.git
+  rev: 0059d2a73e1d41544bcc97619988c3a6d96d5109
+  export: src
 
 git module vim-coc:
   url: https://github.com/neoclide/coc.nvim.git
   rev: bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043
   reup: release
-
-git module vim-colors-solarized:
-  url: https://github.com/altercation/vim-colors-solarized.git
-  rev: 528a59f26d12278698bb946f8fb82a63711eec21
 
 git module vim-ctrlp:
   url: https://github.com/kien/ctrlp.vim.git
@@ -95,6 +89,10 @@ git module vim-neocomplete:
 git module vim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
   rev: fc85a6f07c2cd694be93496ffad75be126240068
+
+git module vim-nord:
+  url: https://github.com/arcticicestudio/nord-vim.git
+  rev: 0748955e9e8d9770b44f2bec8456189430b37d9d
 
 git module vim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
