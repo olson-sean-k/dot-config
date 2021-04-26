@@ -66,7 +66,7 @@ map <C-j> <C-w>j<C-w>_
 map <C-k> <C-w>k<C-w>_
 map <C-l> <C-w>l<C-w>_
 
-colorscheme solarized
+colorscheme nord
 set background=dark
 
 " CtrlP.
@@ -117,7 +117,7 @@ endfunction
 
 " lightline.
 let g:lightline={
-    \ 'colorscheme': 'solarized',
+    \ 'colorscheme': 'nord',
     \ 'active': {
     \     'left': [ [ 'mode', 'paste' ],
     \               [ 'gitbranch', 'readonly', 'filename', 'modified' ]]
