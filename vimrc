@@ -99,6 +99,11 @@ nmap <silent> gi <PLUG>(coc-implementation)
 nmap <silent> gr <PLUG>(coc-references)
 nmap <silent> <F2> <PLUG>(coc-rename)
 
+nnoremap <nowait><expr> <A-j> coc#float#has_scroll() ? coc#float#scroll(1) : "\<A-j>"
+nnoremap <nowait><expr> <A-k> coc#float#has_scroll() ? coc#float#scroll(0) : "\<A-k>"
+inoremap <nowait><expr> <A-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <A-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+
 nnoremap <silent> K :call <SID>coc_hover()<CR>
 function! s:coc_hover()
     if (index(['vim','help'], &filetype) >= 0)
