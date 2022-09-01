@@ -1,6 +1,8 @@
 SHELL:=/usr/bin/env bash
 #.SHELLFLAGS:=-e
 
+.PHONY: build clean install profile
+
 build:
 	# Fetch and import modules.
 	peru sync
