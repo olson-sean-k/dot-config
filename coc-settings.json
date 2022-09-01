@@ -3,6 +3,16 @@
         "rust": {
             "command": "rust-analyzer",
             "filetypes": ["rust"],
+            "initializationOptions": {
+                "inlayHints": {
+                    "chainingHints": false,
+                    "closingBraceHints": {
+                        "enable": true,
+                        "minLines": 16
+                    },
+                    "parameterHints": false
+                }
+            },
             "rootPatterns": ["Cargo.toml"]
         }
     }
