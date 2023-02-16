@@ -2,6 +2,8 @@ call pathogen#infect()
 
 let s:repo=fnamemodify(resolve(expand('<sfile>:p')), ':ht')
 
+set updatetime=1500
+
 set listchars=nbsp:·,tab:>·,trail:·
 set list
 
@@ -66,6 +68,26 @@ map <C-j> <C-w>j<C-w>_
 map <C-k> <C-w>k<C-w>_
 map <C-l> <C-w>l<C-w>_
 
+function s:invert_empty_pattern(pattern)
+    if a:pattern ==# ''
+        return '^$'
+    else
+        return a:pattern
+    endif
+endfunction
+function s:match_cursor_hold_search(cword)
+    let fsearch = s:invert_empty_pattern(@/)
+    let bsearch = s:invert_empty_pattern(@?)
+    if !(a:cword =~ '^\_s*$' || a:cword =~ fsearch || a:cword =~ bsearch)
+        highlight CursorHoldSearch cterm=reverse ctermfg=4 guifg=Black guibg=Blue
+        :exec 'match CursorHoldSearch #\V\<' . a:cword . '\>#'
+    endif
+endfunction
+augroup cursor_hold_search
+    au!
+    au CursorHold * call s:match_cursor_hold_search(expand('<cword>'))
+augroup END
+
 colorscheme solarized
 set background=dark
 
@@ -105,7 +127,7 @@ inoremap <nowait><expr> <A-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(
 inoremap <nowait><expr> <A-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 nnoremap <silent> K :call <SID>coc_hover()<CR>
-function! s:coc_hover()
+function s:coc_hover()
     if (index(['vim','help'], &filetype) >= 0)
         execute 'h '.expand('<cword>')
     elseif (coc#rpc#ready())
