@@ -50,14 +50,14 @@ imports:
 
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized.git
-  rev: 03393f25e241e45fe9341d7baaa2507fd9741a53
+  rev: f359095079dd875dd81fb0343247c6db32d596b9
   copy:
     dircolors.ansi-dark: dir_colors
   pick: dir_colors
 
 git module vim-coc:
   url: https://github.com/neoclide/coc.nvim.git
-  rev: 19c0fbd07ec559fd7bfacb7b6d99aa04b984e4da
+  rev: bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043
   reup: release
 
 git module vim-colors-solarized:
@@ -70,15 +70,15 @@ git module vim-ctrlp:
 
 git module vim-deoplete:
   url: https://github.com/Shougo/deoplete.nvim.git
-  rev: 4e30d980f51087241499e20d687b76dc5000274e
+  rev: 4e91c4d3d0aa7630bea7d7b7f5ac259356c1959d
 
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
-  rev: b411b753f805b969cca856e2ae51fdbab49880df
+  rev: 62f42f013d866139fa23068ac2651b3f7e05a56f
 
 git module vim-gitgutter:
   url: https://github.com/airblade/vim-gitgutter.git
-  rev: f19b6203191d69de955d91467a5707959572119b
+  rev: 00df1089b6267f47c7c0f13536789feb9db1e65b
 
 git module vim-glsl:
   url: https://github.com/tikhomirov/vim-glsl.git
@@ -86,7 +86,7 @@ git module vim-glsl:
 
 git module vim-lightline:
   url: https://github.com/itchyny/lightline.vim.git
-  rev: b02ef0d9f253dfc1cbb3f340b74998d7a4db0bf6
+  rev: b1e91b41f5028d65fa3d31a425ff21591d5d957f
 
 git module vim-neocomplete:
   url: https://github.com/Shougo/neocomplete.vim.git
@@ -107,7 +107,7 @@ git module vim-racer:
 
 git module vim-rust:
   url: https://github.com/rust-lang/rust.vim.git
-  rev: 4aa69b84c8a58fcec6b6dad6fe244b916b1cf830
+  rev: 889b9a7515db477f4cb6808bef1769e53493c578
 
 git module vim-syntastic:
   url: https://github.com/scrooloose/syntastic.git
@@ -115,11 +115,11 @@ git module vim-syntastic:
 
 git module vim-surround:
   url: https://github.com/tpope/vim-surround.git
-  rev: bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea
+  rev: 3d188ed2113431cf8dac77be61b842acb64433d9
 
 git module vim-toml:
   url: https://github.com/cespare/vim-toml.git
-  rev: 89bcca8a3aeab360f6dfe5ce70999fc928669411
+  rev: d36caa6b1cf508a4df1c691f915572fc02143258
 
 git module vim-yankstack:
   url: https://github.com/maxbrunsfeld/vim-yankstack.git
