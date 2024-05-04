@@ -78,7 +78,8 @@ git module vim-fugitive:
 
 git module vim-gitgutter:
   url: https://github.com/airblade/vim-gitgutter.git
-  rev: 00df1089b6267f47c7c0f13536789feb9db1e65b
+  rev: 4a7ca061af2b199a9b97041270611439e8fa2b02
+  reup: main
 
 git module vim-glsl:
   url: https://github.com/tikhomirov/vim-glsl.git
