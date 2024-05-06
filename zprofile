@@ -1,8 +1,4 @@
-# User binaries.
-PATH="$HOME/.local/bin${PATH+:$PATH}"
-
-# Rust
-PATH="$HOME/.cargo/bin${PATH+:$PATH}"
-
-# Golang.
-export GOPATH="$HOME/src"
+# Source local settings.
+if [[ -f ~/.zprofile-local ]]; then
+  source ~/.zprofile-local
+fi
