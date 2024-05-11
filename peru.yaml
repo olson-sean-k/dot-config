@@ -1,6 +1,8 @@
 imports:
-  dircolors-solarized: .
+  dircolors-nord: colors/nord
+  dircolors-solarized: colors/solarized
   vim-coc: nvim/bundle/coc
+  vim-colors-nord: nvim/bundle/colors-nord
   vim-colors-solarized: nvim/bundle/colors-solarized
   vim-ctrlp: nvim/bundle/ctrlp
   vim-fugitive: nvim/bundle/fugitive
@@ -14,6 +16,12 @@ imports:
   vim-toml: nvim/bundle/toml
   vim-yankstack: nvim/bundle/yankstack
 
+git module dircolors-nord:
+  url: https://github.com/arcticicestudio/nord-dircolors.git
+  rev: 0a4906965e2b7b181d2b8f15395dcae2c43ace38
+  reup: develop
+  export: src
+
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized.git
   rev: f359095079dd875dd81fb0343247c6db32d596b9
@@ -25,6 +33,10 @@ git module vim-coc:
   url: https://github.com/neoclide/coc.nvim.git
   rev: bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043
   reup: release
+
+git module vim-colors-nord:
+  url: https://github.com/arcticicestudio/nord-vim.git
+  rev: f13f5dfbb784deddbc1d8195f34dfd9ec73e2295
 
 git module vim-colors-solarized:
   url: https://github.com/altercation/vim-colors-solarized.git

@@ -45,9 +45,6 @@ set laststatus=2
 syntax on
 filetype on
 
-colorscheme solarized
-set background=dark
-
 let mapleader=","
 noremap \ ,
 noremap <C-1> :let @/ = ""<CR><C-1>
@@ -106,13 +103,12 @@ function s:coc_hover()
     elseif (coc#rpc#ready())
         call CocActionAsync('doHover')
     else
-        execut '!' . &keywordprg . " " . expand('<cword>')
+        execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
 
 " lightline.
 let g:lightline={
-    \ 'colorscheme': 'solarized',
     \ 'active': {
     \     'left': [ [ 'mode', 'paste' ],
     \               [ 'gitbranch', 'readonly', 'relativepath', 'modified' ]]
@@ -127,3 +123,6 @@ autocmd FileType go setlocal noexpandtab
 
 " Rust.
 autocmd FileType rust setlocal colorcolumn=80,100
+
+" Configure colors.
+:exec 'source ' . s:root . '/colors.vim'
