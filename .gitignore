@@ -1,5 +1,5 @@
 .peru
-dir_colors
-nvim
-src
-vim
+active
+colors/*/dir_colors
+nvim/autoload
+nvim/bundle
