@@ -8,18 +8,19 @@ build:
 # NOTE: This target, unlike most others, is not phony.
 active:
 	mkdir -p active
-	ln -s -f colors/solarized/dir_colors active/dir_colors
-	ln -s -f colors/solarized/colors.vim active/colors.vim
+	# Activate defaults.
+	ln -s -f -T ../colors/solarized/dir_colors active/dir_colors
+	ln -s -f -T ../colors/solarized/colors.vim active/colors.vim
 
 .PHONY: active-colors-nord
 active-colors-nord: active
-	ln -s -f colors/nord/dir_colors active/dir_colors
-	ln -s -f colors/nord/colors.vim active/colors.vim
+	ln -s -f -T ../colors/nord/dir_colors active/dir_colors
+	ln -s -f -T ../colors/nord/colors.vim active/colors.vim
 
 .PHONY: active-colors-solarized
 active-colors-solarized: active
-	ln -s -f colors/solarized/dir_colors active/dir_colors
-	ln -s -f colors/solarized/colors.vim active/colors.vim
+	ln -s -f -T ../colors/solarized/dir_colors active/dir_colors
+	ln -s -f -T ../colors/solarized/colors.vim active/colors.vim
 
 .PHONY: install-directory
 install-directory:
@@ -37,27 +38,28 @@ install-local: install-directory
 install: active build install-directory install-local
 	# Link configuration.
 	# Terminal colors.
-	ln -s -f $(realpath active/dir_colors) ~/.dir_colors
+	ln -s -f -T $(realpath active)/dir_colors ~/.dir_colors
 	# Git.
-	ln -s -f $(realpath gitignore-global) ~/.gitignore-global
+	ln -s -f -T $(realpath gitignore-global) ~/.gitignore-global
 	# tmux.
-	ln -s -f $(realpath tmux.conf) ~/.tmux.conf
+	ln -s -f -T $(realpath tmux.conf) ~/.tmux.conf
 	# Z shell.
-	ln -s -f $(realpath zsh/zprofile) ~/.zprofile
-	ln -s -f $(realpath zsh/zprompt) ~/.zprompt
-	ln -s -f $(realpath zsh/zshenv) ~/.zshenv
-	ln -s -f $(realpath zsh/zshrc) ~/.zshrc
+	ln -s -f -T $(realpath zsh/zprofile) ~/.zprofile
+	ln -s -f -T $(realpath zsh/zprompt) ~/.zprompt
+	ln -s -f -T $(realpath zsh/zshenv) ~/.zshenv
+	ln -s -f -T $(realpath zsh/zshrc) ~/.zshrc
 	# Starship.
-	ln -s -f $(realpath starship.toml) ~/.config/starship.toml
+	ln -s -f -T $(realpath starship.toml) ~/.config/starship.toml
 	# Neovim.
-	ln -s -f $(realpath nvim/autoload) ~/.config/nvim/autoload
-	ln -s -f $(realpath nvim/bundle) ~/.config/nvim/bundle
-	ln -s -f $(realpath nvim/coc-settings.json) ~/.config/nvim/coc-settings.json
-	ln -s -f $(realpath nvim/init.vim) ~/.config/nvim/init.vim
-	ln -s -f $(realpath active/colors.vim) ~/.config/nvim/colors.vim
+	ln -s -f -T $(realpath nvim/autoload) ~/.config/nvim/autoload
+	ln -s -f -T $(realpath nvim/bundle) ~/.config/nvim/bundle
+	ln -s -f -T $(realpath nvim/coc-settings.json) ~/.config/nvim/coc-settings.json
+	ln -s -f -T $(realpath nvim/init.vim) ~/.config/nvim/init.vim
+	ln -s -f -T $(realpath active)/colors.vim ~/.config/nvim/colors.vim
 	# Configure tools.
 	git config --global core.excludesfile ~/.gitignore-global
 
 .PHONY: clean
 clean:
 	peru clean
+	rm -rf ./active
