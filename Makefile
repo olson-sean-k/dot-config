@@ -10,7 +10,7 @@ active:
 	mkdir -p active
 	touch active/dir_colors
 	touch active/colors.vim
-	touch active/zcolors
+	touch active/zshrc-colors
 
 .PHONY: active-null
 active-null: active
@@ -18,25 +18,25 @@ active-null: active
 	touch active/dir_colors
 	rm -f active/colors.vim
 	touch active/colors.vim
-	rm -f active/zcolors
-	touch active/zcolors
+	rm -f active/zshrc-colors
+	touch active/zshrc-colors
 
 .PHONY: active-colors-catppuccin
 active-colors-catppuccin: active-null
 	ln -s -f -T ../colors/catppuccin/colors.vim active/colors.vim
-	ln -s -f -T ../colors/catppuccin/zcolors active/zcolors
+	ln -s -f -T ../colors/catppuccin/zshrc-colors active/zshrc-colors
 
 .PHONY: active-colors-nord
 active-colors-nord: active-null
 	ln -s -f -T ../colors/nord/dir_colors active/dir_colors
 	ln -s -f -T ../colors/nord/colors.vim active/colors.vim
-	ln -s -f -T ../colors/nord/zcolors active/zcolors
+	ln -s -f -T ../colors/nord/zshrc-colors active/zshrc-colors
 
 .PHONY: active-colors-solarized
 active-colors-solarized: active-null
 	ln -s -f -T ../colors/solarized/dir_colors active/dir_colors
 	ln -s -f -T ../colors/solarized/colors.vim active/colors.vim
-	ln -s -f -T ../colors/solarized/zcolors active/zcolors
+	ln -s -f -T ../colors/solarized/zshrc-colors active/zshrc-colors
 
 .PHONY: install-directory
 install-directory:
@@ -72,7 +72,7 @@ install: active build install-directory install-local
 	# tmux.
 	ln -s -f -T $(realpath tmux.conf) ~/.tmux.conf
 	# Z shell.
-	ln -s -f -T $(realpath active)/zcolors ~/.zcolors
+	ln -s -f -T $(realpath active)/zshrc-colors ~/.zshrc-colors
 	ln -s -f -T $(realpath zsh/zprofile) ~/.zprofile
 	ln -s -f -T $(realpath zsh/zprompt) ~/.zprompt
 	ln -s -f -T $(realpath zsh/zshenv) ~/.zshenv
