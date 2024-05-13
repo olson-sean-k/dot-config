@@ -1,7 +1,9 @@
 imports:
+  bat-colors-catppuccin: bat
   dircolors-nord: colors/nord
   dircolors-solarized: colors/solarized
   vim-coc: nvim/bundle/coc
+  vim-colors-catppuccin: nvim/bundle/colors-catppuccin
   vim-colors-nord: nvim/bundle/colors-nord
   vim-colors-solarized: nvim/bundle/colors-solarized
   vim-ctrlp: nvim/bundle/ctrlp
@@ -15,6 +17,13 @@ imports:
   vim-surround: nvim/bundle/surround
   vim-toml: nvim/bundle/toml
   vim-yankstack: nvim/bundle/yankstack
+
+git module bat-colors-catppuccin:
+  url: https://github.com/catppuccin/bat.git
+  reup: main
+  move:
+    'themes/Catppuccin Mocha.tmTheme': themes/catppuccin-mocha.tmTheme
+  pick: themes/catppuccin-mocha.tmTheme
 
 git module dircolors-nord:
   url: https://github.com/arcticicestudio/nord-dircolors.git
@@ -33,6 +42,10 @@ git module vim-coc:
   url: https://github.com/neoclide/coc.nvim.git
   rev: bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043
   reup: release
+
+git module vim-colors-catppuccin:
+  url: https://github.com/catppuccin/nvim.git
+  reup: main
 
 git module vim-colors-nord:
   url: https://github.com/arcticicestudio/nord-vim.git

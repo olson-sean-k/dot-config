@@ -81,6 +81,11 @@ elif [[ -f ~/.zprompt ]]; then
   source ~/.zprompt
 fi
 
+# Source color settings.
+if [[ -f ~/.zcolors ]]; then
+  source ~/.zcolors
+fi
+
 # Source local settings.
 if [[ -f ~/.zshrc-local ]]; then
   source ~/.zshrc-local

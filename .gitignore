@@ -1,5 +1,6 @@
 .peru
 active
+bat/themes
 colors/*/dir_colors
 nvim/autoload
 nvim/bundle
