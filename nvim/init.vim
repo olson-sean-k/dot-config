@@ -56,6 +56,7 @@ map <C-k> <C-w>k<C-w>_
 map <C-l> <C-w>l<C-w>_
 
 " Highlight word beneath cursor.
+let g:cursor_hold_search_group_attrs = 'term=reverse gui=reverse'
 function s:invert_empty_pattern(pattern)
     if a:pattern ==# ''
         return '^$'
@@ -67,7 +68,7 @@ function s:match_cursor_hold_search(cword)
     let fsearch = s:invert_empty_pattern(@/)
     let bsearch = s:invert_empty_pattern(@?)
     if !(a:cword =~ '^\_s*$' || a:cword =~ fsearch || a:cword =~ bsearch)
-        highlight CursorHoldSearch cterm=reverse ctermfg=4 guifg=Black guibg=Blue
+        :exec 'highlight CursorHoldSearch ' . ' ' . g:cursor_hold_search_group_attrs
         :exec 'match CursorHoldSearch #\V\<' . a:cword . '\>#'
     endif
 endfunction
