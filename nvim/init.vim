@@ -56,7 +56,7 @@ map <C-k> <C-w>k<C-w>_
 map <C-l> <C-w>l<C-w>_
 
 " Highlight word beneath cursor.
-let g:cursor_hold_search_group_attrs = 'term=reverse gui=reverse'
+let g:cursor_hold_search_group_attrs = 'cterm=reverse gui=reverse'
 function s:invert_empty_pattern(pattern)
     if a:pattern ==# ''
         return '^$'
