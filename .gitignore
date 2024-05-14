@@ -2,5 +2,6 @@
 active
 bat/themes
 colors/*/dir_colors
+tmux/plugins
 nvim/autoload
 nvim/bundle

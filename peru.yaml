@@ -2,6 +2,7 @@ imports:
   bat-colors-catppuccin: bat
   dircolors-nord: colors/nord
   dircolors-solarized: colors/solarized
+  tmux-colors-catppuccin: tmux/plugins/catppuccin
   vim-coc: nvim/bundle/coc
   vim-colors-catppuccin: nvim/bundle/colors-catppuccin
   vim-colors-nord: nvim/bundle/colors-nord
@@ -38,6 +39,10 @@ git module dircolors-solarized:
   copy:
     dircolors.ansi-dark: dir_colors
   pick: dir_colors
+
+git module tmux-colors-catppuccin:
+  url: https://github.com/catppuccin/tmux.git
+  reup: main
 
 git module vim-coc:
   url: https://github.com/neoclide/coc.nvim.git

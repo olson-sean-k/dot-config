@@ -9,6 +9,7 @@ build:
 active:
 	mkdir -p active
 	touch active/dir_colors
+	touch active/colors.tmux
 	touch active/colors.vim
 	touch active/zshrc-colors
 
@@ -16,6 +17,8 @@ active:
 active-null: active
 	rm -f active/dir_colors
 	touch active/dir_colors
+	rm -f active/colors.tmux
+	touch active/colors.tmux
 	rm -f active/colors.vim
 	touch active/colors.vim
 	rm -f active/zshrc-colors
@@ -23,19 +26,20 @@ active-null: active
 
 .PHONY: active-colors-catppuccin
 active-colors-catppuccin: active-null
+	ln -s -f -T ../colors/catppuccin/colors.tmux active/colors.tmux
 	ln -s -f -T ../colors/catppuccin/colors.vim active/colors.vim
 	ln -s -f -T ../colors/catppuccin/zshrc-colors active/zshrc-colors
 
 .PHONY: active-colors-nord
 active-colors-nord: active-null
-	ln -s -f -T ../colors/nord/dir_colors active/dir_colors
 	ln -s -f -T ../colors/nord/colors.vim active/colors.vim
+	ln -s -f -T ../colors/nord/dir_colors active/dir_colors
 	ln -s -f -T ../colors/nord/zshrc-colors active/zshrc-colors
 
 .PHONY: active-colors-solarized
 active-colors-solarized: active-null
-	ln -s -f -T ../colors/solarized/dir_colors active/dir_colors
 	ln -s -f -T ../colors/solarized/colors.vim active/colors.vim
+	ln -s -f -T ../colors/solarized/dir_colors active/dir_colors
 	ln -s -f -T ../colors/solarized/zshrc-colors active/zshrc-colors
 
 .PHONY: install-directory
@@ -43,6 +47,7 @@ install-directory:
 	mkdir -p ~/.config
 	mkdir -p ~/.config/bat
 	mkdir -p ~/.config/nvim
+	mkdir -p ~/.config/tmux
 
 .PHONY: install-local
 install-local: install-directory
@@ -57,7 +62,7 @@ install: active build install-directory install-local
 	# bat.
 	ln -s -f -T $(realpath bat/config) ~/.config/bat/config
 	ln -s -f -T $(realpath bat/themes) ~/.config/bat/themes
-	# Terminal colors.
+	# dircolors.
 	ln -s -f -T $(realpath active)/dir_colors ~/.dir_colors
 	# Git.
 	ln -s -f -T $(realpath gitignore-global) ~/.gitignore-global
@@ -70,14 +75,19 @@ install: active build install-directory install-local
 	# Starship.
 	ln -s -f -T $(realpath starship.toml) ~/.config/starship.toml
 	# tmux.
-	ln -s -f -T $(realpath tmux.conf) ~/.tmux.conf
+	ln -s -f -T $(realpath active)/colors.tmux ~/.config/tmux/colors.tmux
+	ln -s -f -T $(realpath tmux/tmux.conf) ~/.tmux.conf
+	ln -s -f -T $(realpath tmux/plugins) ~/.config/tmux/plugins
 	# Z shell.
 	ln -s -f -T $(realpath active)/zshrc-colors ~/.zshrc-colors
 	ln -s -f -T $(realpath zsh/zprofile) ~/.zprofile
 	ln -s -f -T $(realpath zsh/zprompt) ~/.zprompt
 	ln -s -f -T $(realpath zsh/zshenv) ~/.zshenv
 	ln -s -f -T $(realpath zsh/zshrc) ~/.zshrc
-	# Configure tools.
+
+.PHONY: reload
+reload: install
+	# Enable, apply, and reload configuration.
 	bat cache --build
 	git config --global core.excludesfile ~/.gitignore-global
 
