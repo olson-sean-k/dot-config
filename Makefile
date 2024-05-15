@@ -5,7 +5,6 @@ build:
 	# Fetch and import modules.
 	peru sync
 
-# TODO: Is there a way to remove duplication here?
 active:
 	mkdir -p active
 	touch active/dir_colors
@@ -13,15 +12,14 @@ active:
 	touch active/colors.vim
 	touch active/zshrc-colors
 
+# TODO: Is there a way to remove duplication of `active` here?
 .PHONY: active-null
-active-null: active
-	rm -f active/dir_colors
+active-null:
+	rm -rf active
+	mkdir -p active
 	touch active/dir_colors
-	rm -f active/colors.tmux
 	touch active/colors.tmux
-	rm -f active/colors.vim
 	touch active/colors.vim
-	rm -f active/zshrc-colors
 	touch active/zshrc-colors
 
 .PHONY: active-colors-catppuccin
@@ -46,6 +44,7 @@ active-colors-solarized: active-null
 install-directory:
 	mkdir -p ~/.config
 	mkdir -p ~/.config/bat
+	mkdir -p ~/.config/glow
 	mkdir -p ~/.config/nvim
 	mkdir -p ~/.config/tmux
 
@@ -66,6 +65,9 @@ install: active build install-directory install-local
 	ln -s -f -T $(realpath active)/dir_colors ~/.dir_colors
 	# Git.
 	ln -s -f -T $(realpath gitignore-global) ~/.gitignore-global
+	# Glow.
+	ln -s -f -T $(realpath glow/styles) ~/.config/glow/styles
+	ln -s -f -T $(realpath glow/glow.yml) ~/.config/glow/glow.yml
 	# Neovim.
 	ln -s -f -T $(realpath nvim/autoload) ~/.config/nvim/autoload
 	ln -s -f -T $(realpath nvim/bundle) ~/.config/nvim/bundle

@@ -2,6 +2,7 @@ imports:
   bat-colors-catppuccin: bat
   dircolors-nord: colors/nord
   dircolors-solarized: colors/solarized
+  glamour-colors-catppuccin: glow
   tmux-colors-catppuccin: tmux/plugins/catppuccin
   vim-coc: nvim/bundle/coc
   vim-colors-catppuccin: nvim/bundle/colors-catppuccin
@@ -39,6 +40,14 @@ git module dircolors-solarized:
   copy:
     dircolors.ansi-dark: dir_colors
   pick: dir_colors
+
+git module glamour-colors-catppuccin:
+  url: https://github.com/catppuccin/glamour.git
+  rev: 66d7b09325af67b1c5cdb063343e829c04ad7d5f
+  reup: main
+  move:
+    themes: styles
+  pick: styles/catppuccin-mocha.json
 
 git module tmux-colors-catppuccin:
   url: https://github.com/catppuccin/tmux.git
