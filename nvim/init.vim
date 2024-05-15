@@ -68,7 +68,7 @@ function s:match_cursor_hold_search(cword)
     let fsearch = s:invert_empty_pattern(@/)
     let bsearch = s:invert_empty_pattern(@?)
     if !(a:cword =~ '^\_s*$' || a:cword =~ fsearch || a:cword =~ bsearch)
-        :exec 'highlight CursorHoldSearch ' . ' ' . g:cursor_hold_search_group_attrs
+        :exec 'highlight CursorHoldSearch ' . g:cursor_hold_search_group_attrs
         :exec 'match CursorHoldSearch #\V\<' . a:cword . '\>#'
     endif
 endfunction
