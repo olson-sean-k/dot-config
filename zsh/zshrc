@@ -50,6 +50,7 @@ alias nv='nvim'
 alias tma='tmux attach'
 alias tmls='tmux list-sessions'
 alias tmns='tmux new-session'
+alias tmrs='tmux rename-session'
 
 # History.
 HISTFILE=~/.zhistory
