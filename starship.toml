@@ -1,25 +1,59 @@
 add_newline = false
 format = """\
-[╭───────────────────╯](bold green)
+[╭────](bold green)
 [│](bold green) \
 $username\
 $hostname\
 $directory\
-$git_branch\
-$git_status\
+$fill \
 $git_state\
+$git_status\
+$git_branch\
 $package\
 $line_break\
 $jobs\
-[╰─$character](bold green)"""
+[╰───$character](bold green)"""
 
 [directory]
-format = "in [$path]($style) "
+format = "[ 󰉋 ](fg:black bg:blue)[ $path ]($style)"
+style = "fg:blue bg:none"
+
+[fill]
+symbol = "∙"
+style = "fg:black bg:none"
+
+[git_branch]
+format = "[ $symbol ](fg:black bg:purple)[ $branch ]($style)"
+style = "fg:purple bg:none"
+symbol = ""
+
+[git_state]
+am = "AM"
+am_or_rebase = "AM/REBASE"
+bisect = "BISECT"
+cherry_pick = "PICK"
+format = "[( $state ($progress_current/$progress_total) [ ](fg:red bg:none))]($style)"
+merge = "MERGE"
+rebase = "REBASE"
+revert = "REVERT"
+style = "fg:black bg:red"
+
+[git_status]
+format = "[( $all_status$ahead_behind [ ](fg:red bg:none))]($style)"
+style = "fg:black bg:red"
 
 [hostname]
-format = "on [$hostname]($style) "
+format = "[ 󰛳 ](fg:black bg:green)[ $hostname ]($style)"
 ssh_only = false
+style = "fg:green bg:none"
+
+[package]
+format = "[ $symbol ](fg:black bg:blue)[ $version ]($style)"
+style = "fg:blue bg:none"
+symbol = "󰏓"
 
 [username]
-format = "[$user]($style) "
+format = "[  ](fg:black bg:yellow)[ $user ]($style)"
 show_always = true
+style_user = "fg:yellow bg:none"
+style_root = "fg:yellow bg:none"
