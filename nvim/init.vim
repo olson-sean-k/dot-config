@@ -19,9 +19,6 @@ set expandtab
 set wildmenu
 set wildmode=list:longest
 
-" Disable smart indenting for pasting text.
-set pastetoggle=<F3>
-
 " Highlight search.
 set hlsearch
 " Highlight column 80.
@@ -107,6 +104,58 @@ function s:coc_hover()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+
+" DAP
+lua <<EOF
+local dap = require('dap')
+local dapui = require("dapui")
+
+dap.adapters.codelldb = {
+  type = 'server',
+  port = "${port}",
+  executable = {
+    command = '/usr/bin/codelldb',
+    args = {"--port", "${port}"},
+  }
+}
+
+dap.configurations.rust = {
+  {
+    name = "Rust",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = true,
+    showDisassembly = "never",
+  },
+}
+
+vim.keymap.set('n', '<F5>', require 'dap'.continue)
+vim.keymap.set('n', '<F10>', require 'dap'.step_over)
+vim.keymap.set('n', '<F11>', require 'dap'.step_into)
+vim.keymap.set('n', '<F12>', require 'dap'.step_out)
+vim.keymap.set('n', '<leader>b', require 'dap'.toggle_breakpoint)
+
+dap.listeners.before.attach.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+  dapui.close()
+end
+
+dapui.setup()
+EOF
+autocmd FileType dapui* set statusline=\ 
+autocmd FileType dap-repl set statusline=\
 
 " lightline.
 let g:lightline={
