@@ -10,10 +10,32 @@
                         "enable": true,
                         "minLines": 16
                     },
-                    "parameterHints": false
+                    "discriminantHints": false,
+                    "parameterHints": false,
+                    "typeHints": false
                 }
             },
-            "rootPatterns": ["Cargo.toml"]
+            "rootPatterns": ["Cargo.toml"],
+            "settings": {
+                "rust-analyzer": {
+                    "cargo": {
+                        "allFeatures": true
+                    },
+                    "check": {
+                        "allTargets": true
+                    },
+                    "inlayHints": {
+                        "chainingHints": false,
+                        "closingBraceHints": {
+                            "enable": true,
+                            "minLines": 16
+                        },
+                        "discriminantHints": false,
+                        "parameterHints": false,
+                        "typeHints": false
+                    }
+                }
+            }
         }
     }
 }
