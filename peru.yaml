@@ -1,18 +1,18 @@
 imports:
-  dircolors-solarized: .
-  vim-coc: nvim/bundle/coc
-  vim-colors-solarized: nvim/bundle/colors-solarized
-  vim-ctrlp: nvim/bundle/ctrlp
-  vim-fugitive: nvim/bundle/fugitive
-  vim-gitgutter: nvim/bundle/gitgutter
-  vim-glsl: nvim/bundle/glsl
-  vim-lightline: nvim/bundle/lightline
-  vim-nerdtree: nvim/bundle/nerdtree
-  vim-pathogen: nvim/autoload
-  vim-rust: nvim/bundle/rust
-  vim-surround: nvim/bundle/surround
-  vim-toml: nvim/bundle/toml
-  vim-yankstack: nvim/bundle/yankstack
+  dircolors-solarized: out/
+  vim-coc: out/nvim/bundle/coc
+  vim-colors-solarized: out/nvim/bundle/colors-solarized
+  vim-ctrlp: out/nvim/bundle/ctrlp
+  vim-fugitive: out/nvim/bundle/fugitive
+  vim-gitgutter: out/nvim/bundle/gitgutter
+  vim-glsl: out/nvim/bundle/glsl
+  vim-lightline: out/nvim/bundle/lightline
+  vim-nerdtree: out/nvim/bundle/nerdtree
+  vim-pathogen: out/nvim/autoload
+  vim-rust: out/nvim/bundle/rust
+  vim-surround: out/nvim/bundle/surround
+  vim-toml: out/nvim/bundle/toml
+  vim-yankstack: out/nvim/bundle/yankstack
 
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized.git
