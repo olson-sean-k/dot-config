@@ -20,6 +20,8 @@ repo="$(dirname $(realpath ${ZDOTDIR-~}/.zshrc))"
 
 bindkey -e
 
+export BAT_THEME='catppuccin-mocha'
+
 # Tab completion.
 autoload -U compinit
 compinit
