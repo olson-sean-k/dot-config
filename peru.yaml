@@ -1,18 +1,18 @@
 imports:
   dircolors-solarized: out/
-  vim-coc: out/nvim/bundle/coc
-  vim-colors-solarized: out/nvim/bundle/colors-solarized
-  vim-ctrlp: out/nvim/bundle/ctrlp
-  vim-fugitive: out/nvim/bundle/fugitive
-  vim-gitgutter: out/nvim/bundle/gitgutter
-  vim-glsl: out/nvim/bundle/glsl
-  vim-lightline: out/nvim/bundle/lightline
-  vim-nerdtree: out/nvim/bundle/nerdtree
-  vim-pathogen: out/nvim/autoload
-  vim-rust: out/nvim/bundle/rust
-  vim-surround: out/nvim/bundle/surround
-  vim-toml: out/nvim/bundle/toml
-  vim-yankstack: out/nvim/bundle/yankstack
+  nvim-coc: out/nvim/bundle/coc
+  nvim-colors-solarized: out/nvim/bundle/colors-solarized
+  nvim-ctrlp: out/nvim/bundle/ctrlp
+  nvim-fugitive: out/nvim/bundle/fugitive
+  nvim-gitgutter: out/nvim/bundle/gitgutter
+  nvim-glsl: out/nvim/bundle/glsl
+  nvim-lightline: out/nvim/bundle/lightline
+  nvim-nerdtree: out/nvim/bundle/nerdtree
+  nvim-pathogen: out/nvim/autoload
+  nvim-rust: out/nvim/bundle/rust
+  nvim-surround: out/nvim/bundle/surround
+  nvim-toml: out/nvim/bundle/toml
+  nvim-yankstack: out/nvim/bundle/yankstack
 
 git module dircolors-solarized:
   url: https://github.com/seebi/dircolors-solarized.git
@@ -21,57 +21,57 @@ git module dircolors-solarized:
     dircolors.ansi-dark: dir_colors
   pick: dir_colors
 
-git module vim-coc:
+git module nvim-coc:
   url: https://github.com/neoclide/coc.nvim.git
   rev: bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043
   reup: release
 
-git module vim-colors-solarized:
+git module nvim-colors-solarized:
   url: https://github.com/altercation/vim-colors-solarized.git
   rev: 528a59f26d12278698bb946f8fb82a63711eec21
 
-git module vim-ctrlp:
+git module nvim-ctrlp:
   url: https://github.com/kien/ctrlp.vim.git
   rev: 564176f01d7f3f7f8ab452ff4e1f5314de7b0981
 
-git module vim-fugitive:
+git module nvim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
   rev: 62f42f013d866139fa23068ac2651b3f7e05a56f
 
-git module vim-gitgutter:
+git module nvim-gitgutter:
   url: https://github.com/airblade/vim-gitgutter.git
   rev: 4a7ca061af2b199a9b97041270611439e8fa2b02
   reup: main
 
-git module vim-glsl:
+git module nvim-glsl:
   url: https://github.com/tikhomirov/vim-glsl.git
   rev: bfd330a271933c3372fcfa8ce052970746c8e9dd
 
-git module vim-lightline:
+git module nvim-lightline:
   url: https://github.com/itchyny/lightline.vim.git
   rev: b1e91b41f5028d65fa3d31a425ff21591d5d957f
 
-git module vim-nerdtree:
+git module nvim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
   rev: fc85a6f07c2cd694be93496ffad75be126240068
 
-git module vim-pathogen:
+git module nvim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
   export: autoload/
   rev: ac4dd9494fa9008754e49dff85bff1b5746c89b4
 
-git module vim-rust:
+git module nvim-rust:
   url: https://github.com/rust-lang/rust.vim.git
   rev: 889b9a7515db477f4cb6808bef1769e53493c578
 
-git module vim-surround:
+git module nvim-surround:
   url: https://github.com/tpope/vim-surround.git
   rev: 3d188ed2113431cf8dac77be61b842acb64433d9
 
-git module vim-toml:
+git module nvim-toml:
   url: https://github.com/cespare/vim-toml.git
   rev: d36caa6b1cf508a4df1c691f915572fc02143258
 
-git module vim-yankstack:
+git module nvim-yankstack:
   url: https://github.com/maxbrunsfeld/vim-yankstack.git
   rev: 157a659c1b101c899935d961774fb5c8f0775370
