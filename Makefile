@@ -1,9 +1,9 @@
 SHELL:=/usr/bin/env bash
 
-.PHONY: build clean install
-
+# Copy and fetch configuration into the build directory.
+.PHONY: build
 build:
-	# Copy tracked configuration to the build directory.
+	# Copy tracked configuration.
 	mkdir -p out
 	touch out/dir_colors
 	cp -f gitignore-global out
@@ -15,20 +15,27 @@ build:
 	# Fetch and import modules.
 	peru sync
 
-install: build
-	# -- Create configuration directories.
-	mkdir -p ~/.config
+# Create configuration directories.
+.PHONY: install-directory
+install-directory:
+	# bat.
+	mkdir -p ~/.config/bat
 	# Neovim.
-	mkdir -p ~/.config/nvim
 	mkdir -p ~/.config/nvim/after/ftplugin
 	# tmux.
 	mkdir -p ~/.config/tmux
-	# -- Copy local configuration.
+
+# Copy local configuration templates if none are already present.
+.PHONY: install-local
+install-local: build
 	# Z shell.
 	cp --update=none -T $(realpath out/zsh/zprofile-local) ~/.zprofile-local
 	cp --update=none -T $(realpath out/zsh/zshenv-local) ~/.zshenv-local
 	cp --update=none -T $(realpath out/zsh/zshrc-local) ~/.zshrc-local
-	# -- Link configuration.
+
+# Link configuration.
+.PHONY: install
+install: build install-directory install-local
 	# bat.
 	ln -s -f -T $(realpath out/bat/themes) ~/.config/bat/themes
 	# dircolors.
@@ -52,12 +59,16 @@ install: build
 	ln -s -f -T $(realpath out/zsh/zprompt) ~/.zprompt
 	ln -s -f -T $(realpath out/zsh/zshenv) ~/.zshenv
 	ln -s -f -T $(realpath out/zsh/zshrc) ~/.zshrc
-	# -- Configure tools.
+
+# Copy and link configuration and then configure tools.
+.PHONY: reload
+reload: install
 	# bat.
 	bat cache --build
 	# Git.
 	git config --global core.excludesfile ~/.gitignore-global
 
+.PHONY: clean
 clean:
 	peru clean
 	rm -rf out
