@@ -30,6 +30,7 @@ install: build
 	ln -s -f -T $(realpath out/gitignore-global) ~/.gitignore-global
 	ln -s -f -T $(realpath out/starship.toml) ~/.config/starship.toml
 	ln -s -f -T $(realpath out/nvim/after/ftplugin/go.lua) ~/.config/nvim/after/ftplugin/go.lua
+	ln -s -f -T $(realpath out/nvim/after/ftplugin/lua.lua) ~/.config/nvim/after/ftplugin/lua.lua
 	ln -s -f -T $(realpath out/nvim/after/ftplugin/rust.lua) ~/.config/nvim/after/ftplugin/rust.lua
 	ln -s -f -T $(realpath out/nvim/autoload) ~/.config/nvim/autoload
 	ln -s -f -T $(realpath out/nvim/bundle) ~/.config/nvim/bundle
