@@ -51,12 +51,25 @@ vim.g.mapleader = ','
 vim.g.NERDTreeShowBookmarks = 1
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><Esc>')
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '[e', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']e', vim.diagnostic.goto_next)
 vim.keymap.set({'n', 'v', 'o'}, '\\', ',', { noremap = true, silent = true })
 vim.keymap.set({'n', 'v', 'o'}, '<C-h>', '<C-w>h<C-w>_', { silent = true, remap = true })
 vim.keymap.set({'n', 'v', 'o'}, '<C-j>', '<C-w>j<C-w>_', { silent = true, remap = true })
 vim.keymap.set({'n', 'v', 'o'}, '<C-k>', '<C-w>k<C-w>_', { silent = true, remap = true })
 vim.keymap.set({'n', 'v', 'o'}, '<C-l>', '<C-w>l<C-w>_', { silent = true, remap = true })
 vim.keymap.set({'n', 'v', 'o'}, '<leader>t', ':NERDTreeToggle<CR>', { silent = true })
+
+vim.diagnostic.config({
+  float = {
+    border = 'rounded',
+  },
+  severity_sort = true,
+  virtual_text = {
+    prefix = '●',
+  },
+})
 
 vim.api.nvim_create_autocmd("BufEnter", {
   group = vim.api.nvim_create_augroup("NERDTreeOnlyQuit", { clear = true }),
