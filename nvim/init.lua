@@ -76,6 +76,11 @@ vim.g.rustaceanvim = {
       },
     },
   },
+  tools = {
+    float_win_config = {
+      border = 'rounded',
+    },
+  },
 }
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><Esc>')
@@ -161,8 +166,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opt)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opt)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opt)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opt)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opt)
+    vim.keymap.set('n', 'K', function()
+      vim.lsp.buf.hover({ border = 'rounded' })
+    end, opt)
+    vim.keymap.set('n', '<C-k>', function()
+      vim.lsp.buf.signature_help({ border = 'rounded' })
+    end, opt)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opt)
     vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opt)
     -- Display inlay hints.
