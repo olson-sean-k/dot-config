@@ -1,10 +1,19 @@
-# Neovim plugins can be written to `out/nvim/pack/bundle/opt` if further
-# configuration in `init.lua` is necessary.
+
+# Neo/vim plugins can be written to one of two places:
+#
+#   1. `out/nvim/bundle`
+#   2. `out/nvim/pack/bundle/opt`
+#
+# (1) installs plugins via Pathogen. This is best for Vim or legacy plugins, but
+# also works for some more modern Neovim plugins too. (2) installs plugins via
+# Neovim's pack system. (2) is necessary for configuring Lua plugins via a
+# `setup` function. See `init.lua`.
 imports:
   bat-colors-catppuccin: out/bat
   nvim-coc: out/nvim/bundle/coc
   nvim-colors-catppuccin: out/nvim/bundle/colors-catppuccin
   nvim-ctrlp: out/nvim/bundle/ctrlp
+  nvim-fidget: out/nvim/pack/bundle/opt/fidget
   nvim-gitsigns: out/nvim/bundle/gitsigns
   nvim-glsl: out/nvim/bundle/glsl
   nvim-lightline: out/nvim/bundle/lightline
@@ -38,6 +47,11 @@ git module nvim-colors-catppuccin:
 git module nvim-ctrlp:
   url: https://github.com/ctrlpvim/ctrlp.vim.git
   rev: 86872f021c4e245e3c583054fda82fb820a2faee
+
+git module nvim-fidget:
+  url: https://github.com/j-hui/fidget.nvim
+  rev: 7fa433a83118a70fe24c1ce88d5f0bd3453c0970
+  reup: main
 
 git module nvim-gitsigns:
   url: https://github.com/lewis6991/gitsigns.nvim

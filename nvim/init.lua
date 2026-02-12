@@ -1,8 +1,17 @@
 -- Enable legacy Pathogen bundles and add packages.
 vim.cmd([[
   call pathogen#infect()
+  packadd fidget
 ]])
 vim.cmd.colorscheme('catppuccin-mocha')
+
+require('fidget').setup({
+  notification = {
+    window = {
+      border = 'rounded',
+    },
+  },
+})
 
 vim.opt.autoindent = true
 vim.opt.background = 'dark'
