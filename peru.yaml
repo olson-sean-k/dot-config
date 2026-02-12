@@ -1,17 +1,20 @@
+# Neovim plugins can be written to `out/nvim/pack/bundle/opt` if further
+# configuration in `init.lua` is necessary.
 imports:
   nvim-coc: out/nvim/bundle/coc
   nvim-colors-catppuccin: out/nvim/bundle/colors-catppuccin
   nvim-ctrlp: out/nvim/bundle/ctrlp
-  nvim-fugitive: out/nvim/bundle/fugitive
-  nvim-gitgutter: out/nvim/bundle/gitgutter
+  nvim-gitsigns: out/nvim/bundle/gitsigns
   nvim-glsl: out/nvim/bundle/glsl
   nvim-lightline: out/nvim/bundle/lightline
+  nvim-neogit: out/nvim/bundle/neogit
   nvim-nerdtree: out/nvim/bundle/nerdtree
   nvim-pathogen: out/nvim/autoload
-  nvim-rust: out/nvim/bundle/rust
-  nvim-surround: out/nvim/bundle/surround
+  nvim-rainbow-delimiters: out/nvim/bundle/rainbow-delimiters
+  nvim-rustaceanvim: out/nvim/bundle/rustaceanvim
+  nvim-surround: out/nvim/bundle/nvim-surround
   nvim-toml: out/nvim/bundle/toml
-  nvim-yankstack: out/nvim/bundle/yankstack
+  nvim-treesitter: out/nvim/bundle/nvim-treesitter/
 
 git module nvim-coc:
   url: https://github.com/neoclide/coc.nvim.git
@@ -24,16 +27,12 @@ git module nvim-colors-catppuccin:
   rev: d97387aea8264f484bb5d5e74f2182a06c83e0d8
 
 git module nvim-ctrlp:
-  url: https://github.com/kien/ctrlp.vim.git
-  rev: 564176f01d7f3f7f8ab452ff4e1f5314de7b0981
+  url: https://github.com/ctrlpvim/ctrlp.vim.git
+  rev: 86872f021c4e245e3c583054fda82fb820a2faee
 
-git module nvim-fugitive:
-  url: https://github.com/tpope/vim-fugitive.git
-  rev: 62f42f013d866139fa23068ac2651b3f7e05a56f
-
-git module nvim-gitgutter:
-  url: https://github.com/airblade/vim-gitgutter.git
-  rev: 4a7ca061af2b199a9b97041270611439e8fa2b02
+git module nvim-gitsigns:
+  url: https://github.com/lewis6991/gitsigns.nvim
+  rev: 31217271a7314c343606acb4072a94a039a19fb5
   reup: main
 
 git module nvim-glsl:
@@ -44,6 +43,10 @@ git module nvim-lightline:
   url: https://github.com/itchyny/lightline.vim.git
   rev: b1e91b41f5028d65fa3d31a425ff21591d5d957f
 
+git module nvim-neogit:
+  url: https://github.com/NeogitOrg/neogit.git
+  rev: d8bf9102692250193b855acd9025a826f1af2729
+
 git module nvim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
   rev: fc85a6f07c2cd694be93496ffad75be126240068
@@ -53,18 +56,22 @@ git module nvim-pathogen:
   export: autoload/
   rev: ac4dd9494fa9008754e49dff85bff1b5746c89b4
 
-git module nvim-rust:
-  url: https://github.com/rust-lang/rust.vim.git
-  rev: 889b9a7515db477f4cb6808bef1769e53493c578
+git module nvim-rainbow-delimiters:
+  url: https://github.com/HiPhish/rainbow-delimiters.nvim.git
+  rev: d6b802552cbe7d643a3b6b31f419c248d1f1e220
+
+git module nvim-rustaceanvim:
+  url: https://github.com/mrcjkb/rustaceanvim.git
+  rev: bb57d9a9c3f547504e38df1fc17dbcc7065a23f3
 
 git module nvim-surround:
-  url: https://github.com/tpope/vim-surround.git
-  rev: 3d188ed2113431cf8dac77be61b842acb64433d9
+  url: https://github.com/kylechui/nvim-surround.git
+  rev: 1098d7b3c34adcfa7feb3289ee434529abd4afd1
 
 git module nvim-toml:
   url: https://github.com/cespare/vim-toml.git
   rev: d36caa6b1cf508a4df1c691f915572fc02143258
 
-git module nvim-yankstack:
-  url: https://github.com/maxbrunsfeld/vim-yankstack.git
-  rev: 157a659c1b101c899935d961774fb5c8f0775370
+git module nvim-treesitter:
+  url: https://github.com/nvim-treesitter/nvim-treesitter.git
+  rev: 45a07f869b0cffba342276f2c77ba7c116d35db8

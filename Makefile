@@ -19,6 +19,7 @@ install: build
 	# Create configuration directories.
 	mkdir -p ~/.config
 	mkdir -p ~/.config/nvim
+	mkdir -p ~/.config/nvim/after/ftplugin
 	mkdir -p ~/.config/tmux
 	# Copy local configuration.
 	cp --update=none -T $(realpath out/zsh/zprofile-local) ~/.zprofile-local
@@ -28,13 +29,13 @@ install: build
 	ln -s -f -T $(realpath out/dir_colors) ~/.dir_colors
 	ln -s -f -T $(realpath out/gitignore-global) ~/.gitignore-global
 	ln -s -f -T $(realpath out/starship.toml) ~/.config/starship.toml
+	ln -s -f -T $(realpath out/nvim/after/ftplugin/go.lua) ~/.config/nvim/after/ftplugin/go.lua
+	ln -s -f -T $(realpath out/nvim/after/ftplugin/rust.lua) ~/.config/nvim/after/ftplugin/rust.lua
 	ln -s -f -T $(realpath out/nvim/autoload) ~/.config/nvim/autoload
 	ln -s -f -T $(realpath out/nvim/bundle) ~/.config/nvim/bundle
-	ln -s -f -T $(realpath out/nvim/coc-settings.json) ~/.config/nvim/coc-settings.json
-	ln -s -f -T $(realpath out/nvim/init.vim) ~/.config/nvim/init.vim
+	ln -s -f -T $(realpath out/nvim/init.lua) ~/.config/nvim/init.lua
 	ln -s -f -T $(realpath out/tmux/colors.tmux) ~/.config/tmux/colors.tmux
 	ln -s -f -T $(realpath out/tmux/tmux.conf) ~/.tmux.conf
-	ln -s -f -T $(realpath out/tmux/plugins) ~/.config/tmux/plugins
 	ln -s -f -T $(realpath out/zsh/zprofile) ~/.zprofile
 	ln -s -f -T $(realpath out/zsh/zprompt) ~/.zprompt
 	ln -s -f -T $(realpath out/zsh/zshenv) ~/.zshenv
