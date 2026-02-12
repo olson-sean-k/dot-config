@@ -105,9 +105,21 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 vim.api.nvim_create_autocmd('FileType', {
+  -- Enable Tree-sitter for these file type patterns.
   pattern = { 'c', 'lua', 'rust' },
   callback = function()
     vim.treesitter.start()
+  end,
+})
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'toml',
+  callback = function()
+    local root_dir = vim.fs.dirname(vim.api.nvim_buf_get_name(0)) or vim.fn.getcwd()
+    vim.lsp.start({
+      name = 'tombi',
+      cmd = { 'tombi', 'lsp' },
+      root_dir = root_dir,
+    })
   end,
 })
 vim.api.nvim_create_autocmd('LspAttach', {
