@@ -1,7 +1,6 @@
 imports:
-  dircolors-solarized: out/
   nvim-coc: out/nvim/bundle/coc
-  nvim-colors-solarized: out/nvim/bundle/colors-solarized
+  nvim-colors-catppuccin: out/nvim/bundle/colors-catppuccin
   nvim-ctrlp: out/nvim/bundle/ctrlp
   nvim-fugitive: out/nvim/bundle/fugitive
   nvim-gitgutter: out/nvim/bundle/gitgutter
@@ -14,21 +13,15 @@ imports:
   nvim-toml: out/nvim/bundle/toml
   nvim-yankstack: out/nvim/bundle/yankstack
 
-git module dircolors-solarized:
-  url: https://github.com/seebi/dircolors-solarized.git
-  rev: f359095079dd875dd81fb0343247c6db32d596b9
-  copy:
-    dircolors.ansi-dark: dir_colors
-  pick: dir_colors
-
 git module nvim-coc:
   url: https://github.com/neoclide/coc.nvim.git
   rev: bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043
   reup: release
 
-git module nvim-colors-solarized:
-  url: https://github.com/altercation/vim-colors-solarized.git
-  rev: 528a59f26d12278698bb946f8fb82a63711eec21
+git module nvim-colors-catppuccin:
+  url: https://github.com/catppuccin/nvim.git
+  reup: main
+  rev: d97387aea8264f484bb5d5e74f2182a06c83e0d8
 
 git module nvim-ctrlp:
   url: https://github.com/kien/ctrlp.vim.git

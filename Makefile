@@ -5,6 +5,7 @@ SHELL:=/usr/bin/env bash
 build:
 	# Copy tracked configuration to the build directory.
 	mkdir -p out
+	touch out/dir_colors
 	cp -f gitignore-global out
 	cp -f starship.toml out
 	cp -f tmux.conf out

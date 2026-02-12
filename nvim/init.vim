@@ -45,7 +45,7 @@ set laststatus=2
 syntax on
 filetype on
 
-colorscheme solarized
+colorscheme catppuccin-mocha
 set background=dark
 
 let mapleader=","
@@ -70,7 +70,7 @@ function s:match_cursor_hold_search(cword)
     let fsearch = s:invert_empty_pattern(@/)
     let bsearch = s:invert_empty_pattern(@?)
     if !(a:cword =~ '^\_s*$' || a:cword =~ fsearch || a:cword =~ bsearch)
-        highlight CursorHoldSearch cterm=reverse ctermfg=4 guifg=Black guibg=Blue
+        highlight CursorHoldSearch cterm=reverse gui=reverse
         :exec 'match CursorHoldSearch #\V\<' . a:cword . '\>#'
     endif
 endfunction
@@ -112,7 +112,7 @@ endfunction
 
 " lightline.
 let g:lightline={
-    \ 'colorscheme': 'solarized',
+            \ 'colorscheme': 'catppuccin',
     \ 'active': {
     \     'left': [ [ 'mode', 'paste' ],
     \               [ 'gitbranch', 'readonly', 'relativepath', 'modified' ]]
