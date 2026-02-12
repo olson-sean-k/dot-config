@@ -49,6 +49,25 @@ vim.g.lightline = {
 }
 vim.g.mapleader = ','
 vim.g.NERDTreeShowBookmarks = 1
+vim.g.rustaceanvim = {
+  server = {
+    on_attach = function(client, bufnr)
+      -- TODO: This may overapply this configuration beyond Rust buffers.
+      -- Disable inlay hints.
+      vim.lsp.inlay_hint.enable(false, { bufnr = bufnr })
+    end,
+    settings = {
+      ['rust-analyzer'] = {
+        cargo = {
+          allFeatures = true,
+        },
+        procMacro = {
+          enable = true,
+        },
+      },
+    },
+  },
+}
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><Esc>')
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
