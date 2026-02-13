@@ -10,7 +10,6 @@
 # `setup` function. See `init.lua`.
 imports:
   bat-colors-catppuccin: out/bat
-  nvim-coc: out/nvim/bundle/coc
   nvim-colors-catppuccin: out/nvim/bundle/colors-catppuccin
   nvim-ctrlp: out/nvim/bundle/ctrlp
   nvim-fidget: out/nvim/pack/bundle/opt/fidget
@@ -33,11 +32,6 @@ git module bat-colors-catppuccin:
     'themes/Catppuccin Mocha.tmTheme': themes/catppuccin-mocha.tmTheme
   pick: themes/catppuccin-mocha.tmTheme
   rev: d714cc1d358ea51bfc02550dabab693f70cccea0
-
-git module nvim-coc:
-  url: https://github.com/neoclide/coc.nvim.git
-  rev: bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043
-  reup: release
 
 git module nvim-colors-catppuccin:
   url: https://github.com/catppuccin/nvim.git
