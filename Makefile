@@ -50,6 +50,7 @@ install: build install-directory install-local
 	ln -s -f -T $(realpath out/nvim/after/ftplugin/rust.lua) ~/.config/nvim/after/ftplugin/rust.lua
 	ln -s -f -T $(realpath out/nvim/autoload) ~/.config/nvim/autoload
 	ln -s -f -T $(realpath out/nvim/bundle) ~/.config/nvim/bundle
+	ln -s -f -T $(realpath out/nvim/pack) ~/.config/nvim/pack
 	ln -s -f -T $(realpath out/nvim/init.lua) ~/.config/nvim/init.lua
 	# tmux.
 	ln -s -f -T $(realpath out/tmux/colors.tmux) ~/.config/tmux/colors.tmux
