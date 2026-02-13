@@ -31,12 +31,12 @@ git module bat-colors-catppuccin:
   move:
     'themes/Catppuccin Mocha.tmTheme': themes/catppuccin-mocha.tmTheme
   pick: themes/catppuccin-mocha.tmTheme
-  rev: d714cc1d358ea51bfc02550dabab693f70cccea0
+  rev: 6810349b28055dce54076712fc05fc68da4b8ec0
 
 git module nvim-colors-catppuccin:
   url: https://github.com/catppuccin/nvim.git
   reup: main
-  rev: d97387aea8264f484bb5d5e74f2182a06c83e0d8
+  rev: beaf41a30c26fd7d6c386d383155cbd65dd554cd
 
 git module nvim-ctrlp:
   url: https://github.com/ctrlpvim/ctrlp.vim.git
@@ -54,19 +54,19 @@ git module nvim-gitsigns:
 
 git module nvim-glsl:
   url: https://github.com/tikhomirov/vim-glsl.git
-  rev: bfd330a271933c3372fcfa8ce052970746c8e9dd
+  rev: 40dd0b143ef93f3930a8a409f60c1bb85e28b727
 
 git module nvim-lightline:
   url: https://github.com/itchyny/lightline.vim.git
-  rev: b1e91b41f5028d65fa3d31a425ff21591d5d957f
+  rev: e358557e1a9f9fc860416c8eb2e34c0404078155
 
 git module nvim-neogit:
   url: https://github.com/NeogitOrg/neogit.git
-  rev: d8bf9102692250193b855acd9025a826f1af2729
+  rev: 75ca811db3ca3e43137596d25d26e57331540ee0
 
 git module nvim-nerdtree:
   url: https://github.com/scrooloose/nerdtree.git
-  rev: fc85a6f07c2cd694be93496ffad75be126240068
+  rev: 690d061b591525890f1471c6675bcb5bdc8cdff9
 
 git module nvim-pathogen:
   url: https://github.com/tpope/vim-pathogen.git
@@ -87,8 +87,8 @@ git module nvim-surround:
 
 git module nvim-toml:
   url: https://github.com/cespare/vim-toml.git
-  rev: d36caa6b1cf508a4df1c691f915572fc02143258
+  rev: 1b63257680eeb65677eb1ca5077809a982756d58
 
 git module nvim-treesitter:
   url: https://github.com/nvim-treesitter/nvim-treesitter.git
-  rev: 45a07f869b0cffba342276f2c77ba7c116d35db8
+  rev: 42fc28ba918343ebfd5565147a42a26580579482
