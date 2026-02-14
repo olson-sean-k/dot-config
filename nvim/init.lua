@@ -95,6 +95,15 @@ vim.g.rustaceanvim = {
         cargo = {
           allFeatures = true,
         },
+        inlayHints = {
+          chainingHints = { enable = false },
+          closingBraceHints = {
+            enable = true,
+            minLines = 16,
+          },
+          parameterHints = { enable = false },
+          typeHints = { enable = false },
+        },
         procMacro = {
           enable = true,
         },
@@ -204,9 +213,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('LspHints', {}),
   callback = function(event)
-    -- Disable inlay hints.
+    -- Enable inlay hints.
     if vim.lsp.inlay_hint then
-      vim.lsp.inlay_hint.enable(false, { bufnr = event.buf })
+      vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
     end
   end,
 })
