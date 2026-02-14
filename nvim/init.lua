@@ -31,6 +31,7 @@ require('todo-comments').setup({
         'ISSUE',
       },
     },
+    LINT = { color = 'info' },
     SAFETY = { color = 'warning' },
     TODO = { color = 'info' },
     WARNING = {
