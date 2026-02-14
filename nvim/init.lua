@@ -2,10 +2,13 @@
 vim.cmd([[
   call pathogen#infect()
   packadd fidget
+  packadd todo-comments
 ]])
 vim.cmd.colorscheme('catppuccin-mocha')
 
 local palette = require('catppuccin.palettes').get_palette()
+vim.api.nvim_set_hl(0, '@comment.documentation', { fg = palette.pink })
+vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink })
 
 require('fidget').setup({
   notification = {
@@ -13,6 +16,31 @@ require('fidget').setup({
       border = 'rounded',
     },
   },
+})
+require('todo-comments').setup({
+  highlight = {
+    after = '',
+    keyword = 'fg',
+  },
+  keywords = {
+    BUG = {
+      color = 'error',
+      alt = {
+        'FIX',
+        'FIXME',
+        'ISSUE',
+      },
+    },
+    SAFETY = { color = 'warning' },
+    TODO = { color = 'info' },
+    WARNING = {
+      color = 'warning',
+      alt = {
+        'WARN',
+      },
+    },
+  },
+  merge_keywords = false,
 })
 
 vim.opt.autoindent = true

@@ -22,6 +22,7 @@ imports:
   nvim-rainbow-delimiters: out/nvim/bundle/rainbow-delimiters
   nvim-rustaceanvim: out/nvim/bundle/rustaceanvim
   nvim-surround: out/nvim/bundle/nvim-surround
+  nvim-todo-comments: out/nvim/pack/bundle/opt/todo-comments
   nvim-toml: out/nvim/bundle/toml
   nvim-treesitter: out/nvim/bundle/nvim-treesitter/
 
@@ -84,6 +85,11 @@ git module nvim-rustaceanvim:
 git module nvim-surround:
   url: https://github.com/kylechui/nvim-surround.git
   rev: 1098d7b3c34adcfa7feb3289ee434529abd4afd1
+
+git module nvim-todo-comments:
+  url: https://github.com/folke/todo-comments.nvim.git
+  rev: 31e3c38ce9b29781e4422fc0322eb0a21f4e8668
+  reup: main
 
 git module nvim-toml:
   url: https://github.com/cespare/vim-toml.git
