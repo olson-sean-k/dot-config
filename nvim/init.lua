@@ -5,6 +5,8 @@ vim.cmd([[
 ]])
 vim.cmd.colorscheme('catppuccin-mocha')
 
+local palette = require('catppuccin.palettes').get_palette()
+
 require('fidget').setup({
   notification = {
     window = {
@@ -60,11 +62,6 @@ vim.g.mapleader = ','
 vim.g.NERDTreeShowBookmarks = 1
 vim.g.rustaceanvim = {
   server = {
-    on_attach = function(client, bufnr)
-      -- TODO: This may overapply this configuration beyond Rust buffers.
-      -- Disable inlay hints.
-      vim.lsp.inlay_hint.enable(false, { bufnr = bufnr })
-    end,
     settings = {
       ['rust-analyzer'] = {
         cargo = {
@@ -174,9 +171,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opt)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opt)
     vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opt)
-    -- Display inlay hints.
+  end,
+})
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('LspHints', {}),
+  callback = function(event)
+    -- Disable inlay hints.
     if vim.lsp.inlay_hint then
-      vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
+      vim.lsp.inlay_hint.enable(false, { bufnr = event.buf })
     end
   end,
 })
