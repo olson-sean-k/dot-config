@@ -155,7 +155,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 vim.api.nvim_create_autocmd('FileType', {
   -- Enable Tree-sitter for these file type patterns.
-  pattern = { 'c', 'lua', 'markdown', 'rust', 'toml' },
+  pattern = { 'c', 'lua', 'markdown', 'rust', 'toml', 'yaml' },
   callback = function()
     vim.treesitter.start()
   end,
