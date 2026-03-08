@@ -1,4 +1,5 @@
 export EDITOR=nvim
+export SUDO_EDITOR=nvim
 
 # User binaries.
 PATH="$HOME/.local/bin${PATH+:$PATH}"
