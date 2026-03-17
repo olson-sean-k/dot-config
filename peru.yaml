@@ -9,6 +9,7 @@
 # `setup` function. See `init.lua`.
 imports:
   bat-colors-catppuccin: out/bat
+  nvim-blink-cmp: out/nvim/pack/bundle/opt/blink-cmp
   nvim-colors-catppuccin: out/nvim/bundle/colors-catppuccin
   nvim-ctrlp: out/nvim/bundle/ctrlp
   nvim-fidget: out/nvim/pack/bundle/opt/fidget
@@ -32,6 +33,11 @@ git module bat-colors-catppuccin:
     'themes/Catppuccin Mocha.tmTheme': themes/catppuccin-mocha.tmTheme
   pick: themes/catppuccin-mocha.tmTheme
   rev: 6810349b28055dce54076712fc05fc68da4b8ec0
+
+git module nvim-blink-cmp:
+  url: https://github.com/saghen/blink.cmp.git
+  reup: v1
+  rev: dcde5e7e32b6bae5a7ddf343c1587a8490dbd263
 
 git module nvim-colors-catppuccin:
   url: https://github.com/catppuccin/nvim.git

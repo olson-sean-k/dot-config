@@ -1,6 +1,7 @@
 -- Enable legacy Pathogen bundles and add packages.
 vim.cmd([[
   call pathogen#infect()
+  packadd blink-cmp
   packadd fidget
   packadd todo-comments
 ]])
@@ -10,6 +11,27 @@ local palette = require('catppuccin.palettes').get_palette()
 vim.api.nvim_set_hl(0, '@comment.documentation', { fg = palette.pink })
 vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink })
 
+require('blink-cmp').setup({
+  fuzzy = {
+    implementation = 'lua',
+  },
+  keymap = {
+    preset = 'default'
+  },
+  sources = {
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
+  },
+  completion = {
+    menu = {
+      border = 'rounded',
+    },
+    documentation = {
+      window = {
+        border = { 'rounded' },
+      },
+    },
+  },
+})
 require('fidget').setup({
   notification = {
     window = {
