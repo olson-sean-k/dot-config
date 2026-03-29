@@ -54,6 +54,11 @@ alias tmls='tmux list-sessions'
 alias tmns='tmux new-session'
 alias tmrs='tmux rename-session'
 
+alias zj='zellij'
+alias zja='zellij attach'
+alias zjls='zellij list-sessions'
+alias zjns='zellij -s'
+
 # History.
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=5000

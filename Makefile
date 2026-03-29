@@ -11,6 +11,7 @@ build:
 	cp -R -f nvim out
 	cp -R -f ssh out
 	cp -R -f tmux out
+	cp -R -f zellij out
 	cp -R -f zsh out
 	# Fetch and import modules.
 	peru sync
@@ -24,6 +25,8 @@ install-directory:
 	mkdir -p ~/.config/nvim/after/ftplugin
 	# tmux.
 	mkdir -p ~/.config/tmux
+	# Zellij.
+	mkdir -p ~/.config/zellij
 
 # Copy local configuration templates if none are already present.
 .PHONY: install-local
@@ -55,6 +58,8 @@ install: build install-directory install-local
 	# tmux.
 	ln -s -f -T $(realpath out/tmux/colors.tmux) ~/.config/tmux/colors.tmux
 	ln -s -f -T $(realpath out/tmux/tmux.conf) ~/.tmux.conf
+	# Zellij.
+	ln -s -f -T $(realpath out/zellij/config.kdl) ~/.config/zellij/config.kdl
 	# Z shell.
 	ln -s -f -T $(realpath out/zsh/zprofile) ~/.zprofile
 	ln -s -f -T $(realpath out/zsh/zprompt) ~/.zprompt
