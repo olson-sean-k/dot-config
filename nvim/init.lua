@@ -3,6 +3,7 @@ vim.cmd([[
   call pathogen#infect()
   packadd blink-cmp
   packadd fidget
+  packadd neo-tree
   packadd todo-comments
 ]])
 vim.cmd.colorscheme('catppuccin-mocha')
@@ -36,6 +37,41 @@ require('fidget').setup({
   notification = {
     window = {
       border = 'rounded',
+    },
+  },
+})
+require('neo-tree').setup({
+  filesystem = {
+    filtered_items = {
+      hide_gitignored = false,
+    },
+    mappings = {
+      ['H'] = 'toggle_hidden',
+    },
+    use_libuv_file_watcher = true,
+  },
+  window = {
+    mappings = {
+      ['bc'] = 'order_by_created',
+      ['bd'] = 'order_by_diagnostics',
+      ['bg'] = 'order_by_git_status',
+      ['bm'] = 'order_by_modified',
+      ['bn'] = 'order_by_name',
+      ['bs'] = 'order_by_size',
+      ['bt'] = 'order_by_type',
+      ['C'] = 'close_node',
+      ['o'] = 'open',
+      ['x'] = 'close_node',
+
+      -- Unbind defaults with an 'o' prefix to prevent waiting on more input to
+      -- disambiguate the 'o' for 'open' binding above.
+      ['oc'] = 'none',
+      ['od'] = 'none',
+      ['og'] = 'none',
+      ['om'] = 'none',
+      ['on'] = 'none',
+      ['os'] = 'none',
+      ['ot'] = 'none',
     },
   },
 })
@@ -110,7 +146,6 @@ vim.g.lightline = {
   },
 }
 vim.g.mapleader = ','
-vim.g.NERDTreeShowBookmarks = 1
 vim.g.rustaceanvim = {
   server = {
     settings = {
@@ -149,7 +184,8 @@ vim.keymap.set({'n', 'v', 'o'}, '<C-h>', '<C-w>h<C-w>_', { silent = true, remap 
 vim.keymap.set({'n', 'v', 'o'}, '<C-j>', '<C-w>j<C-w>_', { silent = true, remap = true })
 vim.keymap.set({'n', 'v', 'o'}, '<C-k>', '<C-w>k<C-w>_', { silent = true, remap = true })
 vim.keymap.set({'n', 'v', 'o'}, '<C-l>', '<C-w>l<C-w>_', { silent = true, remap = true })
-vim.keymap.set({'n', 'v', 'o'}, '<leader>t', ':NERDTreeToggle<CR>', { silent = true })
+vim.keymap.set('n', '<leader>t', ':Neotree toggle left<CR>', { silent = true })
+vim.keymap.set('n', '<leader>y', ':Neotree toggle float<CR>', { silent = true })
 
 vim.diagnostic.config({
   float = {
@@ -161,20 +197,6 @@ vim.diagnostic.config({
   },
 })
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  group = vim.api.nvim_create_augroup("NERDTreeOnlyQuit", { clear = true }),
-  callback = function()
-    -- When entering a buffer and it is the only remaining window and is
-    -- also NERDTree, then quit Neovim.
-    local tree = vim.b.NERDTree
-    local has_tree = tree ~= nil
-    local is_tab_tree = has_tree and tree.isTabTree ~= nil and vim.fn.eval('b:NERDTree.isTabTree()') == 1
-    local is_only_window = vim.fn.winnr('$') == 1
-    if is_only_window and is_tab_tree then
-      vim.cmd("quit")
-    end
-  end,
-})
 vim.api.nvim_create_autocmd('FileType', {
   -- Enable Tree-sitter for these file type patterns.
   pattern = { 'c', 'lua', 'markdown', 'rust', 'toml', 'yaml' },
