@@ -9,6 +9,7 @@ build:
 	cp -f gitignore-global out
 	cp -f starship.toml out
 	cp -R -f nvim out
+	cp -R -f script out
 	cp -R -f tmux out
 	cp -R -f zellij out
 	cp -R -f zsh out
@@ -25,7 +26,9 @@ install-directory:
 	# tmux.
 	mkdir -p ~/.config/tmux
 	# Zellij.
-	mkdir -p ~/.config/zellij
+	mkdir -p ~/.config/zellij/layouts
+	# Local binaries.
+	mkdir -p ~/.local/bin
 
 # Copy local configuration templates if none are already present.
 .PHONY: install-local
@@ -44,6 +47,8 @@ install: build install-directory install-local
 	ln -s -f -T $(realpath out/dir_colors) ~/.dir_colors
 	# Git.
 	ln -s -f -T $(realpath out/gitignore-global) ~/.gitignore-global
+	# Scripts.
+	ln -s -f -T $(realpath out/script/rustp) ~/.local/bin/rustp
 	# Starship.
 	ln -s -f -T $(realpath out/starship.toml) ~/.config/starship.toml
 	# Neovim.
@@ -58,6 +63,7 @@ install: build install-directory install-local
 	ln -s -f -T $(realpath out/tmux/colors.tmux) ~/.config/tmux/colors.tmux
 	ln -s -f -T $(realpath out/tmux/tmux.conf) ~/.tmux.conf
 	# Zellij.
+	ln -s -f -T $(realpath out/zellij/layouts/rustp.kdl) ~/.config/zellij/layouts/rustp.kdl
 	ln -s -f -T $(realpath out/zellij/config.kdl) ~/.config/zellij/config.kdl
 	# Z shell.
 	ln -s -f -T $(realpath out/zsh/zprofile) ~/.zprofile
