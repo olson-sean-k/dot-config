@@ -165,6 +165,7 @@ keybinds clear-defaults=true {
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
+        bind "Alt _" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
@@ -175,6 +176,10 @@ keybinds clear-defaults=true {
         bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
         bind "Alt o" { MoveTab "right"; }
+        bind "Alt Shift left" { GoToPreviousTab; }
+        bind "Alt Shift right" { GoToNextTab; }
+        bind "Alt H" { GoToPreviousTab; }
+        bind "Alt L" { GoToNextTab; }
     }
     shared_except "locked" {
         bind "Alt p" { TogglePaneInGroup; }
