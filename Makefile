@@ -9,7 +9,6 @@ build:
 	cp -f gitignore-global out
 	cp -f starship.toml out
 	cp -R -f nvim out
-	cp -R -f ssh out
 	cp -R -f tmux out
 	cp -R -f zellij out
 	cp -R -f zsh out
