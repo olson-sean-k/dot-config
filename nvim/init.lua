@@ -7,17 +7,24 @@ vim.cmd([[
   packadd neo-tree
   packadd todo-comments
 ]])
+
 vim.cmd.colorscheme('catppuccin-mocha')
+require('catppuccin').setup({
+  integrations = {
+    gitsigns = true,
+    neogit = true,
+    neotree = true,
+  },
+})
+local palette = require('catppuccin.palettes').get_palette()
+vim.api.nvim_set_hl(0, '@comment.documentation', { fg = palette.pink })
+vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink })
 
 require('plugin.blink-cmp')
 require('plugin.fidget')
 require('plugin.lualine')
 require('plugin.neo-tree')
 require('plugin.todo-comments')
-
-local palette = require('catppuccin.palettes').get_palette()
-vim.api.nvim_set_hl(0, '@comment.documentation', { fg = palette.pink })
-vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink })
 
 vim.opt.autoindent = true
 vim.opt.background = 'dark'
