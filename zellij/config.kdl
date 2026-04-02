@@ -1,7 +1,7 @@
 default_mode "locked"
 show_release_notes false
 show_startup_tips false
-theme "catppuccin-macchiato"
+theme "catppuccin-mocha"
 
 keybinds clear-defaults=true {
     locked {
