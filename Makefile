@@ -22,8 +22,8 @@ install-directory:
 	# bat.
 	mkdir -p ~/.config/bat
 	# Neovim.
-	mkdir -p ~/.config/nvim/after/ftplugin
-	mkdir -p ~/.config/nvim/lua/plugins
+	mkdir -p ~/.config/nvim/after
+	mkdir -p ~/.config/nvim/lua
 	# tmux.
 	mkdir -p ~/.config/tmux
 	# Zellij.
@@ -53,13 +53,8 @@ install: build install-directory install-local
 	# Starship.
 	ln -s -f -T $(realpath out/starship.toml) ~/.config/starship.toml
 	# Neovim.
-	ln -s -f -T $(realpath out/nvim/after/ftplugin/go.lua) ~/.config/nvim/after/ftplugin/go.lua
-	ln -s -f -T $(realpath out/nvim/after/ftplugin/lua.lua) ~/.config/nvim/after/ftplugin/lua.lua
-	ln -s -f -T $(realpath out/nvim/after/ftplugin/rust.lua) ~/.config/nvim/after/ftplugin/rust.lua
-	ln -s -f -T $(realpath out/nvim/lua/plugins/blink-cmp.lua) ~/.config/nvim/lua/plugins/blink-cmp.lua
-	ln -s -f -T $(realpath out/nvim/lua/plugins/fidget.lua) ~/.config/nvim/lua/plugins/fidget.lua
-	ln -s -f -T $(realpath out/nvim/lua/plugins/neo-tree.lua) ~/.config/nvim/lua/plugins/neo-tree.lua
-	ln -s -f -T $(realpath out/nvim/lua/plugins/todo-comments.lua) ~/.config/nvim/lua/plugins/todo-comments.lua
+	ln -s -f -T $(realpath out/nvim/after/ftplugin) ~/.config/nvim/after/ftplugin
+	ln -s -f -T $(realpath out/nvim/lua/plugins) ~/.config/nvim/lua/plugin
 	ln -s -f -T $(realpath out/nvim/autoload) ~/.config/nvim/autoload
 	ln -s -f -T $(realpath out/nvim/bundle) ~/.config/nvim/bundle
 	ln -s -f -T $(realpath out/nvim/pack) ~/.config/nvim/pack

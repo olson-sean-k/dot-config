@@ -8,10 +8,10 @@ vim.cmd([[
 ]])
 vim.cmd.colorscheme('catppuccin-mocha')
 
-require('plugins.blink-cmp')
-require('plugins.fidget')
-require('plugins.neo-tree')
-require('plugins.todo-comments')
+require('plugin.blink-cmp')
+require('plugin.fidget')
+require('plugin.neo-tree')
+require('plugin.todo-comments')
 
 local palette = require('catppuccin.palettes').get_palette()
 vim.api.nvim_set_hl(0, '@comment.documentation', { fg = palette.pink })
