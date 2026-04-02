@@ -15,8 +15,8 @@ imports:
   nvim-fidget: out/nvim/pack/bundle/opt/fidget
   nvim-gitsigns: out/nvim/bundle/gitsigns
   nvim-glsl: out/nvim/bundle/glsl
-  nvim-lightline: out/nvim/bundle/lightline
   nvim-lsp-file-operations: out/nvim/bundle/lsp-file-operations
+  nvim-lualine: out/nvim/pack/bundle/opt/lualine
   nvim-neogit: out/nvim/bundle/neogit
   nvim-neo-tree: out/nvim/pack/bundle/opt/neo-tree
   nvim-nui: out/nvim/bundle/nui
@@ -65,13 +65,13 @@ git module nvim-glsl:
   url: https://github.com/tikhomirov/vim-glsl.git
   rev: 40dd0b143ef93f3930a8a409f60c1bb85e28b727
 
-git module nvim-lightline:
-  url: https://github.com/itchyny/lightline.vim.git
-  rev: e358557e1a9f9fc860416c8eb2e34c0404078155
-
 git module nvim-lsp-file-operations:
   url: https://github.com/antosha417/nvim-lsp-file-operations
   rev: b9c795d3973e8eec22706af14959bc60c579e771
+
+git module nvim-lualine:
+  url: https://github.com/nvim-lualine/lualine.nvim
+  rev: 47f91c416daef12db467145e16bed5bbfe00add8
 
 git module nvim-neogit:
   url: https://github.com/NeogitOrg/neogit.git

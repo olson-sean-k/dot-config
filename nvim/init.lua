@@ -3,6 +3,7 @@ vim.cmd([[
   call pathogen#infect()
   packadd blink-cmp
   packadd fidget
+  packadd lualine
   packadd neo-tree
   packadd todo-comments
 ]])
@@ -10,6 +11,7 @@ vim.cmd.colorscheme('catppuccin-mocha')
 
 require('plugin.blink-cmp')
 require('plugin.fidget')
+require('plugin.lualine')
 require('plugin.neo-tree')
 require('plugin.todo-comments')
 
