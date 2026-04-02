@@ -74,6 +74,11 @@ require('neo-tree').setup({
       ['os'] = 'none',
       ['ot'] = 'none',
     },
+    popup = {
+      size = {
+        width = '80%',
+      },
+    },
   },
 })
 require('todo-comments').setup({
