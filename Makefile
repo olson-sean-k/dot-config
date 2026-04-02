@@ -54,7 +54,7 @@ install: build install-directory install-local
 	ln -s -f -T $(realpath out/starship.toml) ~/.config/starship.toml
 	# Neovim.
 	ln -s -f -T $(realpath out/nvim/after/ftplugin) ~/.config/nvim/after/ftplugin
-	ln -s -f -T $(realpath out/nvim/lua/plugins) ~/.config/nvim/lua/plugin
+	ln -s -f -T $(realpath out/nvim/lua/plugin) ~/.config/nvim/lua/plugin
 	ln -s -f -T $(realpath out/nvim/autoload) ~/.config/nvim/autoload
 	ln -s -f -T $(realpath out/nvim/bundle) ~/.config/nvim/bundle
 	ln -s -f -T $(realpath out/nvim/pack) ~/.config/nvim/pack
