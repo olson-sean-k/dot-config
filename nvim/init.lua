@@ -8,105 +8,14 @@ vim.cmd([[
 ]])
 vim.cmd.colorscheme('catppuccin-mocha')
 
+require('plugins.blink-cmp')
+require('plugins.fidget')
+require('plugins.neo-tree')
+require('plugins.todo-comments')
+
 local palette = require('catppuccin.palettes').get_palette()
 vim.api.nvim_set_hl(0, '@comment.documentation', { fg = palette.pink })
 vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink })
-
-require('blink-cmp').setup({
-  fuzzy = {
-    implementation = 'lua',
-  },
-  keymap = {
-    preset = 'default'
-  },
-  sources = {
-    default = { 'lsp', 'path', 'snippets', 'buffer' },
-  },
-  completion = {
-    menu = {
-      border = 'rounded',
-    },
-    documentation = {
-      window = {
-        border = { 'rounded' },
-      },
-    },
-  },
-})
-require('fidget').setup({
-  notification = {
-    window = {
-      border = 'rounded',
-    },
-  },
-})
-require('neo-tree').setup({
-  close_if_last_window = true,
-  filesystem = {
-    filtered_items = {
-      hide_gitignored = false,
-    },
-    mappings = {
-      ['H'] = 'toggle_hidden',
-    },
-    use_libuv_file_watcher = true,
-  },
-  window = {
-    mappings = {
-      ['bc'] = 'order_by_created',
-      ['bd'] = 'order_by_diagnostics',
-      ['bg'] = 'order_by_git_status',
-      ['bm'] = 'order_by_modified',
-      ['bn'] = 'order_by_name',
-      ['bs'] = 'order_by_size',
-      ['bt'] = 'order_by_type',
-      ['C'] = 'close_node',
-      ['o'] = 'open',
-      ['x'] = 'close_node',
-
-      -- Unbind defaults with an 'o' prefix to prevent waiting on more input to
-      -- disambiguate the 'o' for 'open' binding above.
-      ['oc'] = 'none',
-      ['od'] = 'none',
-      ['og'] = 'none',
-      ['om'] = 'none',
-      ['on'] = 'none',
-      ['os'] = 'none',
-      ['ot'] = 'none',
-    },
-    popup = {
-      size = {
-        width = '80%',
-      },
-    },
-  },
-})
-require('todo-comments').setup({
-  highlight = {
-    after = '',
-    keyword = 'fg',
-  },
-  keywords = {
-    BUG = {
-      color = 'error',
-      alt = {
-        'FIX',
-        'FIXME',
-        'ISSUE',
-      },
-    },
-    LINT = { color = 'info' },
-    SAFETY = { color = 'warning' },
-    TODO = { color = 'info' },
-    WARNING = {
-      color = 'warning',
-      alt = {
-        'WARN',
-      },
-    },
-  },
-  merge_keywords = false,
-})
 
 vim.opt.autoindent = true
 vim.opt.background = 'dark'
