@@ -8,12 +8,10 @@ layout {
             plugin location="zellij:status-bar"
         }
     }
-    tab name="rustp" focus=true {
+    tab focus=true name="rustp" {
         pane split_direction="vertical" {
-            pane command="sh" focus=true {
-                args "-c" "$EDITOR ./src/main.rs"
-            }
-            pane command="cargo" {
+            pane edit="src/main.rs" focus=true name="edit"
+            pane command="cargo" name="output" {
                 args "watch" "-s" "clear && cargo run -q"
             }
         }
