@@ -1,7 +1,6 @@
 add_newline = false
 format = """\
-[╭────](bold green)
-[│](bold green) \
+$status \
 $username\
 $hostname\
 $directory\
@@ -12,7 +11,11 @@ $git_branch\
 $package\
 $line_break\
 $jobs\
-[╰───$character](bold green)"""
+$character"""
+
+[character]
+error_symbol = "[╰───>](bold red)"
+success_symbol = "[╰───>](bold green)"
 
 [directory]
 format = "[ 󰉋 ](fg:black bg:blue)[ $path ]($style)"
@@ -51,6 +54,16 @@ style = "fg:green bg:none"
 format = "[ $symbol ](fg:black bg:blue)[ $version ]($style)"
 style = "fg:blue bg:none"
 symbol = "󰏓"
+
+[status]
+disabled = false
+format = "$symbol"
+success_symbol = """\
+[╭────](bold green)
+[│](bold green)"""
+symbol = """\
+[╭────](bold red)
+[│](bold red)"""
 
 [username]
 format = "[  ](fg:black bg:yellow)[ $user ]($style)"
