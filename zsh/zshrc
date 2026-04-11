@@ -66,6 +66,7 @@ HISTSIZE=SAVEHIST=5000
 setopt incappendhistory
 setopt sharehistory
 setopt extendedhistory
+setopt HIST_IGNORE_SPACE
 
 # Extended globbing.
 setopt extendedglob
