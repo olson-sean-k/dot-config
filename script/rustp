@@ -29,5 +29,5 @@ fi
 if [ -n "$ZELLIJ" ]; then
     zellij action new-tab --layout rustp
 else
-    zellij --session rustp --layout rustp
+    zellij --layout rustp
 fi
