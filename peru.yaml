@@ -98,7 +98,7 @@ git module nvim-plenary:
 
 git module nvim-rainbow-delimiters:
   url: https://github.com/HiPhish/rainbow-delimiters.nvim.git
-  rev: d6b802552cbe7d643a3b6b31f419c248d1f1e220
+  rev: aab6caaffd79b8def22ec4320a5344f7c42f58d2
 
 git module nvim-rustaceanvim:
   url: https://github.com/mrcjkb/rustaceanvim.git
