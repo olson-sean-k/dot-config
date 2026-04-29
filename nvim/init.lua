@@ -124,10 +124,11 @@ vim.diagnostic.config({
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  -- Enable Tree-sitter for these file type patterns.
-  pattern = { 'c', 'lua', 'markdown', 'rust', 'toml', 'yaml' },
-  callback = function()
-    vim.treesitter.start()
+  -- Enable Tree-sitter for all file type patterns. `pcall` prevents visible
+  -- errors if a suitable parser is not available.
+  pattern = '*',
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
   end,
 })
 vim.api.nvim_create_autocmd('FileType', {
