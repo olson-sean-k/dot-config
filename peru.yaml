@@ -40,25 +40,25 @@ git module bat-colors-catppuccin:
 git module nvim-blink-cmp:
   url: https://github.com/saghen/blink.cmp.git
   reup: v1
-  rev: dcde5e7e32b6bae5a7ddf343c1587a8490dbd263
+  rev: 78336bc89ee5365633bcf754d93df01678b5c08f
 
 git module nvim-colors-catppuccin:
   url: https://github.com/catppuccin/nvim.git
   reup: main
-  rev: beaf41a30c26fd7d6c386d383155cbd65dd554cd
+  rev: 426dbebe06b5c69fd846ceb17b42e12f890aedf1
 
 git module nvim-ctrlp:
   url: https://github.com/ctrlpvim/ctrlp.vim.git
-  rev: 86872f021c4e245e3c583054fda82fb820a2faee
+  rev: 3739dcd638f457559d5a1ae1e398276175694e4b
 
 git module nvim-fidget:
   url: https://github.com/j-hui/fidget.nvim
-  rev: 7fa433a83118a70fe24c1ce88d5f0bd3453c0970
+  rev: 889e2e96edef4e144965571d46f7a77bcc4d0ddf
   reup: main
 
 git module nvim-gitsigns:
   url: https://github.com/lewis6991/gitsigns.nvim
-  rev: 31217271a7314c343606acb4072a94a039a19fb5
+  rev: 6d808f99bd63303646794406e270bd553ad7792e
   reup: main
 
 git module nvim-glsl:
@@ -71,15 +71,15 @@ git module nvim-lsp-file-operations:
 
 git module nvim-lualine:
   url: https://github.com/nvim-lualine/lualine.nvim
-  rev: 47f91c416daef12db467145e16bed5bbfe00add8
+  rev: 131a558e13f9f28b15cd235557150ccb23f89286
 
 git module nvim-neogit:
   url: https://github.com/NeogitOrg/neogit.git
-  rev: 75ca811db3ca3e43137596d25d26e57331540ee0
+  rev: 792c139da736230855e8341ebe6175bb6eb8268b
 
 git module nvim-neo-tree:
   url: https://github.com/nvim-neo-tree/neo-tree.nvim
-  rev: 84c75e7a7e443586f60508d12fc50f90d9aee14e
+  rev: 19d20a99bf0061a5ecc4343d2f09fa713306c965
   reup: main
 
 git module nvim-nui:
@@ -94,19 +94,20 @@ git module nvim-pathogen:
 
 git module nvim-plenary:
   url: https://github.com/nvim-lua/plenary.nvim
-  rev: b9fd5226c2f76c951fc8ed5923d85e4de065e509
+  rev: 74b06c6c75e4eeb3108ec01852001636d85a932b
 
 git module nvim-rainbow-delimiters:
   url: https://github.com/HiPhish/rainbow-delimiters.nvim.git
-  rev: aab6caaffd79b8def22ec4320a5344f7c42f58d2
+  rev: 08783ec022e7ddefe0f12a16f1ac4968f55478b0
 
 git module nvim-rustaceanvim:
   url: https://github.com/mrcjkb/rustaceanvim.git
-  rev: bb57d9a9c3f547504e38df1fc17dbcc7065a23f3
+  rev: 135f40f1243cf73963d34cf4694f8587cc07bee9
+  reup: main
 
 git module nvim-surround:
   url: https://github.com/kylechui/nvim-surround.git
-  rev: 1098d7b3c34adcfa7feb3289ee434529abd4afd1
+  rev: 9291040de8cd8a4439eb64c441e8d5d2bf884a5a
 
 git module nvim-todo-comments:
   url: https://github.com/folke/todo-comments.nvim.git
@@ -115,8 +116,9 @@ git module nvim-todo-comments:
 
 git module nvim-toml:
   url: https://github.com/cespare/vim-toml.git
-  rev: 1b63257680eeb65677eb1ca5077809a982756d58
+  rev: da051b7c23bad3c52d18886203c594739780ec09
 
 git module nvim-treesitter:
   url: https://github.com/nvim-treesitter/nvim-treesitter.git
-  rev: 42fc28ba918343ebfd5565147a42a26580579482
+  rev: 4916d6592ede8c07973490d9322f187e07dfefac
+  reup: main

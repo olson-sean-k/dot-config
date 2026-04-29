@@ -45,6 +45,7 @@ vim.opt.listchars = {
   trail = '·',
 }
 vim.opt.number = true
+vim.opt.rtp:append(vim.fn.stdpath('config') .. '/bundle/nvim-treesitter' .. '/runtime')
 vim.opt.shiftwidth = 4
 vim.opt.showmode = false
 vim.opt.smarttab = true
