@@ -23,7 +23,8 @@ bindkey -e
 export BAT_THEME='catppuccin-mocha'
 
 # Tab completion.
-autoload -U compinit
+fpath=(~/.local/share/zsh/site-functions $fpath)
+autoload -Uz compinit
 compinit
 
 setopt completeinword
