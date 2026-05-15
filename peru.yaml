@@ -58,7 +58,7 @@ git module nvim-fidget:
 
 git module nvim-gitsigns:
   url: https://github.com/lewis6991/gitsigns.nvim
-  rev: 6d808f99bd63303646794406e270bd553ad7792e
+  rev: dd3f588bacbeb041be6facf1742e42097f62165d
   reup: main
 
 git module nvim-glsl:
@@ -75,11 +75,11 @@ git module nvim-lualine:
 
 git module nvim-neogit:
   url: https://github.com/NeogitOrg/neogit.git
-  rev: 792c139da736230855e8341ebe6175bb6eb8268b
+  rev: 99326a1310fb2d616b455d2fd16d01bf00682f06
 
 git module nvim-neo-tree:
   url: https://github.com/nvim-neo-tree/neo-tree.nvim
-  rev: 19d20a99bf0061a5ecc4343d2f09fa713306c965
+  rev: 83e7a2982fd12b9c3d35bc39dd5877cd91a02a61
   reup: main
 
 git module nvim-nui:
@@ -102,12 +102,12 @@ git module nvim-rainbow-delimiters:
 
 git module nvim-rustaceanvim:
   url: https://github.com/mrcjkb/rustaceanvim.git
-  rev: 135f40f1243cf73963d34cf4694f8587cc07bee9
+  rev: f5c1bf138571442bfda96a2bf45239e009264a6e
   reup: main
 
 git module nvim-surround:
   url: https://github.com/kylechui/nvim-surround.git
-  rev: 9291040de8cd8a4439eb64c441e8d5d2bf884a5a
+  rev: 2e93e154de9ff326def6480a4358bfc149d5da2c
 
 git module nvim-todo-comments:
   url: https://github.com/folke/todo-comments.nvim.git
