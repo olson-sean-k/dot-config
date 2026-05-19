@@ -1,0 +1,29 @@
+{
+    "entries": [
+        { "type": "User" },
+        { "type": "Hostname" },
+        {
+            "name": "OS",
+            "type": "Distro"
+        },
+        { "type": "Kernel" },
+        { "type": "Uptime" },
+        { "type": "Shell" },
+        { "type": "Terminal" },
+        {
+            "command": "echo $EDITOR",
+            "name": "$EDITOR",
+            "shell": true,
+            "type": "Custom"
+        },
+        { "type": "CPU" },
+        { "type": "GPU" },
+        { "type": "RAM" },
+        { "type": "Disk" },
+        { "type": "LAN_IP" },
+        { "type": "WAN_IP" }
+    ],
+    "entries_color": "1;34",
+    "hide_undetected": true,
+    "suppress_warnings": true
+}

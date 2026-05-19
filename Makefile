@@ -8,6 +8,7 @@ build:
 	touch out/dir_colors
 	cp -f gitignore-global out
 	cp -f starship.toml out
+	cp -R -f archey4 out
 	cp -R -f nvim out
 	cp -R -f script out
 	cp -R -f tmux out
@@ -19,6 +20,8 @@ build:
 # Create configuration directories.
 .PHONY: install-directory
 install-directory:
+	# Archey 4
+	mkdir -p ~/.config/archey4
 	# bat.
 	mkdir -p ~/.config/bat
 	# Neovim.
@@ -42,6 +45,8 @@ install-local: build
 # Link configuration.
 .PHONY: install
 install: build install-directory install-local
+	# Archey 4
+	ln -s -f -T $(realpath out/archey4/config.json) ~/.config/archey4/config.json
 	# bat.
 	ln -s -f -T $(realpath out/bat/themes) ~/.config/bat/themes
 	# dircolors.
