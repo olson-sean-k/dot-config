@@ -11,10 +11,15 @@ vim.cmd([[
 
 vim.cmd.colorscheme('catppuccin-mocha')
 require('catppuccin').setup({
+  -- `lualine.nvim` is complex, so its default integration is used implicitly.
   integrations = {
-    gitsigns = true,
+    gitsigns = {
+      enabled = true,
+      transparent = false,
+    },
     neogit = true,
     neotree = true,
+    rainbow_delimiters = true,
   },
 })
 local palette = require('catppuccin.palettes').get_palette()
