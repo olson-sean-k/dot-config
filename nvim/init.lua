@@ -3,6 +3,7 @@ vim.cmd([[
   call pathogen#infect()
   packadd blink-cmp
   packadd fidget
+  packadd hlchunk
   packadd lualine
   packadd neo-tree
   packadd todo-comments
@@ -22,6 +23,7 @@ vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink
 
 require('plugin.blink-cmp')
 require('plugin.fidget')
+require('plugin.hlchunk')
 require('plugin.lualine')
 require('plugin.neo-tree')
 require('plugin.todo-comments')
