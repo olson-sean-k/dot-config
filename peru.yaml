@@ -45,7 +45,7 @@ git module nvim-blink-cmp:
 git module nvim-colors-catppuccin:
   url: https://github.com/catppuccin/nvim.git
   reup: main
-  rev: 426dbebe06b5c69fd846ceb17b42e12f890aedf1
+  rev: 49a926655a2f5579e9c276470fc300baaa49e524
 
 git module nvim-ctrlp:
   url: https://github.com/ctrlpvim/ctrlp.vim.git
@@ -53,12 +53,12 @@ git module nvim-ctrlp:
 
 git module nvim-fidget:
   url: https://github.com/j-hui/fidget.nvim
-  rev: 889e2e96edef4e144965571d46f7a77bcc4d0ddf
+  rev: 82404b196e73a00b1727a91903beef5ddc319d22
   reup: main
 
 git module nvim-gitsigns:
   url: https://github.com/lewis6991/gitsigns.nvim
-  rev: dd3f588bacbeb041be6facf1742e42097f62165d
+  rev: 25050e4ed39e628282831d4cbecb1850454ce915
   reup: main
 
 git module nvim-glsl:
@@ -71,15 +71,15 @@ git module nvim-lsp-file-operations:
 
 git module nvim-lualine:
   url: https://github.com/nvim-lualine/lualine.nvim
-  rev: 131a558e13f9f28b15cd235557150ccb23f89286
+  rev: 221ce6b2d999187044529f49da6554a92f740a96
 
 git module nvim-neogit:
   url: https://github.com/NeogitOrg/neogit.git
-  rev: 99326a1310fb2d616b455d2fd16d01bf00682f06
+  rev: 5d1b65d6215928e941e1a6a4e76e02fd45ada31f
 
 git module nvim-neo-tree:
   url: https://github.com/nvim-neo-tree/neo-tree.nvim
-  rev: 83e7a2982fd12b9c3d35bc39dd5877cd91a02a61
+  rev: 1b4c40051f2623d0a7dcf19d5b74b997b97b0a9a
   reup: main
 
 git module nvim-nui:
@@ -98,16 +98,16 @@ git module nvim-plenary:
 
 git module nvim-rainbow-delimiters:
   url: https://github.com/HiPhish/rainbow-delimiters.nvim.git
-  rev: 08783ec022e7ddefe0f12a16f1ac4968f55478b0
+  rev: a798325b7f36acc62741d1029930a7b96d4dd4bf
 
 git module nvim-rustaceanvim:
   url: https://github.com/mrcjkb/rustaceanvim.git
-  rev: f5c1bf138571442bfda96a2bf45239e009264a6e
+  rev: a22902f216b068faa311807c9f361c6b1d971367
   reup: main
 
 git module nvim-surround:
   url: https://github.com/kylechui/nvim-surround.git
-  rev: 2e93e154de9ff326def6480a4358bfc149d5da2c
+  rev: 8b47db616ef658b8fc27e61db2896aa2f40134de
 
 git module nvim-todo-comments:
   url: https://github.com/folke/todo-comments.nvim.git
