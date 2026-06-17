@@ -28,7 +28,7 @@ vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink
 
 require('plugin.blink-cmp')
 require('plugin.fidget')
-require('plugin.hlchunk')
+require('plugin.hlchunk')(palette)
 require('plugin.lualine')
 require('plugin.neo-tree')
 require('plugin.todo-comments')
