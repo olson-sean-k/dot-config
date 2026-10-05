@@ -12,7 +12,7 @@ layout {
         pane split_direction="vertical" {
             pane edit="src/main.rs" focus=true name="edit"
             pane command="cargo" name="output" {
-                args "watch" "-s" "clear && cargo run -q"
+                args "watch" "-c" "-x" "run -q"
             }
         }
     }
