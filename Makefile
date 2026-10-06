@@ -11,7 +11,6 @@ build:
 	cp -R -f archey4 out
 	cp -R -f nvim out
 	cp -R -f script out
-	cp -R -f tmux out
 	cp -R -f zellij out
 	cp -R -f zsh out
 	# Fetch and import modules.
@@ -27,8 +26,6 @@ install-directory:
 	# Neovim.
 	mkdir -p ~/.config/nvim/after
 	mkdir -p ~/.config/nvim/lua
-	# tmux.
-	mkdir -p ~/.config/tmux
 	# Zellij.
 	mkdir -p ~/.config/zellij/layouts
 	# Local binaries.
@@ -64,9 +61,6 @@ install: build install-directory install-local
 	ln -s -f -T $(realpath out/nvim/bundle) ~/.config/nvim/bundle
 	ln -s -f -T $(realpath out/nvim/pack) ~/.config/nvim/pack
 	ln -s -f -T $(realpath out/nvim/init.lua) ~/.config/nvim/init.lua
-	# tmux.
-	ln -s -f -T $(realpath out/tmux/colors.tmux) ~/.config/tmux/colors.tmux
-	ln -s -f -T $(realpath out/tmux/tmux.conf) ~/.tmux.conf
 	# Zellij.
 	ln -s -f -T $(realpath out/zellij/layouts/rustp.kdl) ~/.config/zellij/layouts/rustp.kdl
 	ln -s -f -T $(realpath out/zellij/config.kdl) ~/.config/zellij/config.kdl
