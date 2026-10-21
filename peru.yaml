@@ -46,25 +46,25 @@ git module nvim-blink-cmp:
 git module nvim-colors-catppuccin:
   url: https://github.com/catppuccin/nvim.git
   reup: main
-  rev: 49a926655a2f5579e9c276470fc300baaa49e524
+  rev: edefef779ab08ce1a4a404713e3012b0d202bd35
 
 git module nvim-ctrlp:
   url: https://github.com/ctrlpvim/ctrlp.vim.git
-  rev: 3739dcd638f457559d5a1ae1e398276175694e4b
+  rev: 0065942ef13ce28293e2b26cb622d035da050b44
 
 git module nvim-fidget:
   url: https://github.com/j-hui/fidget.nvim
-  rev: 82404b196e73a00b1727a91903beef5ddc319d22
+  rev: 9e0201673e08e997e7cf52afca5565c70bd117f3
   reup: main
 
 git module nvim-hlchunk:
   url: https://github.com/shellRaining/hlchunk.nvim.git
-  rev: 06f51922ca43d5cdacf96725c106405fe064c59e
+  rev: 4ddc056e4ca45f1c7dc6aa21935df710b263b1aa
   reup: main
 
 git module nvim-gitsigns:
   url: https://github.com/lewis6991/gitsigns.nvim
-  rev: 25050e4ed39e628282831d4cbecb1850454ce915
+  rev: fd780920613e541cbdfac41bf711583ed49f9249
   reup: main
 
 git module nvim-glsl:
@@ -73,7 +73,7 @@ git module nvim-glsl:
 
 git module nvim-lsp-file-operations:
   url: https://github.com/antosha417/nvim-lsp-file-operations
-  rev: b9c795d3973e8eec22706af14959bc60c579e771
+  rev: 8b150305362e971db0c40cee89ea4576a64e86cd
 
 git module nvim-lualine:
   url: https://github.com/nvim-lualine/lualine.nvim
@@ -81,16 +81,16 @@ git module nvim-lualine:
 
 git module nvim-neogit:
   url: https://github.com/NeogitOrg/neogit.git
-  rev: 5d1b65d6215928e941e1a6a4e76e02fd45ada31f
+  rev: a6549816e62cec7037f1549d8f1659d45635370c
 
 git module nvim-neo-tree:
   url: https://github.com/nvim-neo-tree/neo-tree.nvim
-  rev: 1b4c40051f2623d0a7dcf19d5b74b997b97b0a9a
+  rev: 4d55ed3482da32d1a68a9ed36dca5f4d69ec0ffb
   reup: main
 
 git module nvim-nui:
   url: https://github.com/MunifTanjim/nui.nvim
-  rev: de740991c12411b663994b2860f1a4fd0937c130
+  rev: 10fc361835c856ba4233ef5ea135b919bf3dce97
   reup: main
 
 git module nvim-pathogen:
@@ -104,11 +104,11 @@ git module nvim-plenary:
 
 git module nvim-rainbow-delimiters:
   url: https://github.com/HiPhish/rainbow-delimiters.nvim.git
-  rev: a798325b7f36acc62741d1029930a7b96d4dd4bf
+  rev: b55decda611755171bc5bf8f4c99603a75de4b41
 
 git module nvim-rustaceanvim:
   url: https://github.com/mrcjkb/rustaceanvim.git
-  rev: a22902f216b068faa311807c9f361c6b1d971367
+  rev: 4e01e114ad24e2f5ee91962e3a751b0c70a7447a
   reup: main
 
 git module nvim-surround:
@@ -126,5 +126,5 @@ git module nvim-toml:
 
 git module nvim-treesitter:
   url: https://github.com/nvim-treesitter/nvim-treesitter.git
-  rev: 4916d6592ede8c07973490d9322f187e07dfefac
+  rev: 29212d826054bb2948fa9d3a99eca9bf6a050eb2
   reup: main
