@@ -9,7 +9,6 @@ vim.cmd([[
   packadd todo-comments
 ]])
 
-vim.cmd.colorscheme('catppuccin-mocha')
 require('catppuccin').setup({
   -- `lualine.nvim` is complex, so its default integration is used implicitly.
   integrations = {
@@ -22,6 +21,7 @@ require('catppuccin').setup({
     rainbow_delimiters = true,
   },
 })
+vim.cmd.colorscheme('catppuccin-mocha')
 local palette = require('catppuccin.palettes').get_palette()
 vim.api.nvim_set_hl(0, '@comment.documentation', { fg = palette.pink })
 vim.api.nvim_set_hl(0, '@lsp.typemod.comment.documentation', { fg = palette.pink })
